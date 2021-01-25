@@ -1,7 +1,9 @@
 .menuContainer {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	background-color: white;
+	border-radius: 10px;
 }
 
 .menuContainer a {
@@ -23,11 +25,11 @@
 }
 
 @media screen and (max-width: 600px) {
-	.menuContainer {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-
 	.menuContainer a {
 		font-size: 0.8125rem;
+	}
+
+	.gridItem {
+		padding: 1rem 0;
 	}
 }
