@@ -1,0 +1,33 @@
+.menuContainer {
+	margin-top: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menuContainer a {
+	text-decoration: none;
+	color: black;
+	font-size: 0.9375rem;
+}
+
+.gridItem {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.gridText {
+	margin-top: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+	.menuContainer {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.menuContainer a {
+		font-size: 0.8125rem;
+	}
+}

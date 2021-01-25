@@ -1,41 +1,54 @@
 import styles from './Header.module.css';
-import SearchIcon from '@material-ui/icons/Search';
+import Link from 'next/link';
 import MenuIcon from '@material-ui/icons/Menu';
-import GolfCourseIcon from '@material-ui/icons/GolfCourse';
-import Image from 'next/image';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const Header = () => {
 	return (
-		<header className={styles.container}>
-			<section className={styles.mainImage}>
-				<Image src="/images/background.jpg" width={1024} height={600} />
-			</section>
-			<section className={styles.navbar}>
-				<div className={styles.logo}>
-					<a href="/">
-						<GolfCourseIcon />
-						<h3>Pride of Golf</h3>
-					</a>
-				</div>
-				<div className={styles.search}>
-					<form className={styles.searchBar} action="">
-						<input
-							type="text"
-							placeholder="해외골프는 POG와 함께"
-							name="search"
-						/>
-						<button type="submit">
-							<SearchIcon />
-						</button>
-					</form>
-				</div>
-				<div className={styles.menu}>
-					<button>
-						<MenuIcon />
-					</button>
-				</div>
-			</section>
-		</header>
+		<section className={styles.headerContainer}>
+			<div className={styles.logo}>
+				<Link href="/">
+					<h1>Pride of Golf</h1>
+				</Link>
+			</div>
+			<ul className={styles.navbar}>
+				<li>
+					<Link href="/">
+						<a>로그인</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
+						<a>예약확인</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
+						<a>견적문의</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
+						<a>이벤트</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
+						<a>후기게시판</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/">
+						<a>
+							<AccountCircleIcon />
+						</a>
+					</Link>
+				</li>
+			</ul>
+			<button className={styles.menuIcon}>
+				<MenuIcon />
+			</button>
+		</section>
 	);
 };
 

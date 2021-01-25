@@ -1,54 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 
-.mainImage {
-	position: absolute;
+.headerContainer {
+	padding: 0 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid lightgrey;
 }
 
-.logo a {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	font-family: 'Varela', sans-serif;
-	color: black;
-	position: relative;
+.logo {
+	font-family: 'Balsamiq Sans', cursive;
+	cursor: pointer;
 }
 
 .navbar {
 	display: flex;
-	justify-content: space-between;
+	font-size: 0.875rem;
 	align-items: center;
-	padding: 0 10px;
 }
 
-.search {
-	flex-grow: 2;
+.navbar ul {
+	margin: 0;
 }
 
-.searchBar {
-	display: flex;
-	align-items: center;
-	padding: 0 15px;
-	position: relative;
+.navbar li {
+	list-style: none;
+	margin-right: 1rem;
 }
 
-.searchBar input {
-	height: 40px;
-	width: 100%;
-	border-radius: 50px;
-	border: 1px solid lightgray;
-	padding-left: 20px;
+.navbar a {
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
 }
 
-.searchBar button {
-	border: 0;
-	background-color: white;
-	position: absolute;
-	top: 7px;
-	right: 25px;
+.menuIcon {
+	display: none;
 }
 
-.menu button {
-	border: 0;
-	background: none;
-	position: relative;
+@media screen and (max-width: 600px) {
+	.headerContainer {
+		display: flex;
+		flex-direction: column;
+	}
+	.navbar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		/* Navbar Display Toggle */
+		display: none;
+	}
+
+	.navbar li {
+		margin-bottom: 10px;
+	}
+
+	.menuIcon {
+		display: block;
+		border: 0;
+		background-color: white;
+		position: absolute;
+		right: 10px;
+		top: 20px;
+	}
+
+	.menuIcon:hover {
+		cursor: pointer;
+	}
 }
