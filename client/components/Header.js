@@ -7,6 +7,9 @@ import Image from 'next/image';
 const Header = () => {
 	return (
 		<header className={styles.container}>
+			<section className={styles.mainImage}>
+				<Image src="/images/background.jpg" width={1024} height={600} />
+			</section>
 			<section className={styles.navbar}>
 				<div className={styles.logo}>
 					<a href="/">
@@ -32,7 +35,6 @@ const Header = () => {
 					</button>
 				</div>
 			</section>
-			<section className={styles.mainImage}></section>
 		</header>
 	);
 };
