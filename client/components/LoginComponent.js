@@ -6,12 +6,12 @@ const LoginComponent = () => {
 		<section className={styles.loginComponentContainer}>
 			<div className={styles.loginWrapper}>
 				<div className={styles.loginTitle}>
-					<h4>로그인</h4>
+					<h2>로그인</h2>
 				</div>
 				<form action="#">
 					<div className={styles.inputContainer}>
 						<input
-							type="text"
+							type="email"
 							className={styles.inputID}
 							name="id"
 							required

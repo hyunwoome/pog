@@ -3,7 +3,11 @@
 	background-color: white;
 	padding: 1rem;
 	border-radius: 5px;
-	height: 80vh;
+	height: 100vh;
+}
+
+.loginTitle {
+	margin-bottom: 1rem;
 }
 
 .loginWrapper {

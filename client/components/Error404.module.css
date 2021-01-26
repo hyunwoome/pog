@@ -1,0 +1,33 @@
+.error404Container {
+	height: 100vh;
+	background-color: white;
+	padding: 1rem;
+}
+
+.errorText {
+	margin-bottom: 1rem;
+	color: darkgray;
+	font-size: 0.875rem;
+}
+
+.buttonContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.backButton {
+	width: 49%;
+	height: 45px;
+	border: 1px solid lightgray;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.homeButton {
+	width: 49%;
+	border: 0;
+	background-color: #1876d1;
+	color: white;
+	border-radius: 5px;
+}
