@@ -8,7 +8,7 @@ const Menu = () => {
 
 	return (
 		<div className={styles.menuContainer}>
-			<Link href="/">
+			<Link href="/goods/hotdeal">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -21,7 +21,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/taiwan">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -34,7 +34,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/china">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -47,7 +47,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/japan">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -60,7 +60,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/vietnam">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -73,7 +73,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/philippines">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -87,7 +87,7 @@ const Menu = () => {
 				</a>
 			</Link>
 
-			<Link href="/">
+			<Link href="/goods/guam-saipan">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -100,7 +100,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/asia">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -113,7 +113,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/korea">
 				<a>
 					<div className={styles.gridItem}>
 						<Image
@@ -126,7 +126,7 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
-			<Link href="/">
+			<Link href="/goods/local">
 				<a>
 					<div className={styles.gridItem}>
 						<Image

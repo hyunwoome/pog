@@ -29,11 +29,6 @@ const Header = () => {
 				</li>
 				<li>
 					<Link href="/">
-						<a>이벤트</a>
-					</Link>
-				</li>
-				<li>
-					<Link href="/">
 						<a>후기게시판</a>
 					</Link>
 				</li>
