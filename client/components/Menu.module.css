@@ -3,7 +3,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	background-color: white;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .menuContainer a {

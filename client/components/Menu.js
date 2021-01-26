@@ -64,19 +64,6 @@ const Menu = () => {
 				<a>
 					<div className={styles.gridItem}>
 						<Image
-							src="/images/menu/cathedral.png"
-							width={width}
-							height={height}
-							layout="fixed"
-						/>
-						<span className={styles.gridText}>필리핀</span>
-					</div>
-				</a>
-			</Link>
-			<Link href="/">
-				<a>
-					<div className={styles.gridItem}>
-						<Image
 							src="/images/menu/asian-hat.png"
 							width={width}
 							height={height}
@@ -90,15 +77,16 @@ const Menu = () => {
 				<a>
 					<div className={styles.gridItem}>
 						<Image
-							src="/images/menu/flower.png"
+							src="/images/menu/cathedral.png"
 							width={width}
 							height={height}
 							layout="fixed"
 						/>
-						<span className={styles.gridText}>괌</span>
+						<span className={styles.gridText}>필리핀</span>
 					</div>
 				</a>
 			</Link>
+
 			<Link href="/">
 				<a>
 					<div className={styles.gridItem}>
@@ -108,7 +96,7 @@ const Menu = () => {
 							height={height}
 							layout="fixed"
 						/>
-						<span className={styles.gridText}>사이판</span>
+						<span className={styles.gridText}>괌 | 사이판</span>
 					</div>
 				</a>
 			</Link>
@@ -138,10 +126,21 @@ const Menu = () => {
 					</div>
 				</a>
 			</Link>
+			<Link href="/">
+				<a>
+					<div className={styles.gridItem}>
+						<Image
+							src="/images/menu/place.png"
+							width={width}
+							height={height}
+							layout="fixed"
+						/>
+						<span className={styles.gridText}>지방출발</span>
+					</div>
+				</a>
+			</Link>
 		</div>
 	);
 };
 
 export default Menu;
-
-// 초특가 / 태국 / 중국 / 일본 / 필리핀 / 베트남 / 괌 / 사이판 / 기타아시아 / 국내투어
