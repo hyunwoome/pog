@@ -7,7 +7,7 @@ const Review = () => {
 			<section className={styles.title}>
 				<Link href="/">
 					<a>
-						<h3>🌟 후기게시판</h3>
+						<h4>🌟 후기게시판</h4>
 					</a>
 				</Link>
 			</section>

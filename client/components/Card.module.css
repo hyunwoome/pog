@@ -1,0 +1,27 @@
+.cardContainer {
+	margin-top: 1rem;
+}
+
+.imageContainer img {
+	border-radius: 10px;
+}
+
+.cardContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 0.625rem;
+}
+
+.location {
+	font-size: 0.75rem;
+	color: gray;
+}
+
+.title h5 {
+	margin: 0.3rem 0 0 0;
+}
+
+.price h5 {
+	margin: 0.3rem 0 0 0;
+}

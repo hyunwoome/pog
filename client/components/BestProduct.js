@@ -1,5 +1,6 @@
 import styles from './BestProduct.module.css';
 import Link from 'next/link';
+import Card from './Card';
 
 const BestProduct = () => {
 	return (
@@ -7,12 +8,14 @@ const BestProduct = () => {
 			<section className={styles.title}>
 				<Link href="/">
 					<a>
-						<h3>👍 베스트 골프상품</h3>
+						<h4>👍 베스트 골프상품</h4>
 					</a>
 				</Link>
 			</section>
 			<section className={styles.container}>
-				<div className={styles.card}></div>
+				<div className={styles.card}>
+					<Card />
+				</div>
 			</section>
 		</div>
 	);

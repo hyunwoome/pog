@@ -7,7 +7,7 @@ const HotDeal = () => {
 			<section className={styles.title}>
 				<Link href="/">
 					<a>
-						<h3>🔥 초특가로 떠나자</h3>
+						<h4>🔥 초특가로 떠나자</h4>
 					</a>
 				</Link>
 			</section>
