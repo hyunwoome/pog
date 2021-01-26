@@ -12,21 +12,29 @@ const Card = () => {
 	return (
 		<div className={styles.cardContainer}>
 			<div className={styles.imageContainer}>
-				<Image
-					src="/images/card/golf.jpg"
-					width={width}
-					height={height}
-					layout="fixed"
-				/>
+				<Link href="/">
+					<a>
+						<Image
+							src="/images/card/golf.jpg"
+							width={width}
+							height={height}
+							layout="fixed"
+						/>
+					</a>
+				</Link>
 			</div>
 			<section className={styles.cardContent}>
-				<div className={styles.location}>{location}</div>
-				<div className={styles.title}>
-					<h5>{title}</h5>
-				</div>
-				<div className={styles.price}>
-					<h5>{price}</h5>
-				</div>
+				<Link href="/">
+					<a>
+						<div className={styles.location}>{location}</div>
+						<div className={styles.title}>
+							<h5>{title}</h5>
+						</div>
+						<div className={styles.price}>
+							<h5>{price}</h5>
+						</div>
+					</a>
+				</Link>
 			</section>
 		</div>
 	);

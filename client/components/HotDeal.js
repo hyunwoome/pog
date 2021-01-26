@@ -1,5 +1,6 @@
 import styles from './HotDeal.module.css';
 import Link from 'next/link';
+import Card from './Card';
 
 const HotDeal = () => {
 	return (
@@ -12,7 +13,9 @@ const HotDeal = () => {
 				</Link>
 			</section>
 			<section className={styles.container}>
-				<div className={styles.card}></div>
+				<div className={styles.card}>
+					<Card />
+				</div>
 			</section>
 		</div>
 	);

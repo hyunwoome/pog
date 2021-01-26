@@ -13,7 +13,7 @@ const Header = () => {
 			</div>
 			<ul className={styles.navbar}>
 				<li>
-					<Link href="/">
+					<Link href="/login">
 						<a>로그인</a>
 					</Link>
 				</li>
