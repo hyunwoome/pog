@@ -2,6 +2,7 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { blue, lightBlue } from '@material-ui/core/colors';
 
 const Header = () => {
 	return (
@@ -32,14 +33,14 @@ const Header = () => {
 						<a>후기게시판</a>
 					</Link>
 				</li>
-				<li>
-					<Link href="/">
-						<a>
-							<AccountCircleIcon />
-						</a>
-					</Link>
-				</li>
 			</ul>
+			<div className={styles.accountIcon}>
+				<Link href="/">
+					<a>
+						<AccountCircleIcon style={{ color: blue[800] }} />
+					</a>
+				</Link>
+			</div>
 			<button className={styles.menuIcon}>
 				<MenuIcon />
 			</button>

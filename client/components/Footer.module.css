@@ -38,3 +38,10 @@
 .copyright {
 	margin-bottom: 0.5rem;
 }
+
+.iconCopyright button {
+	padding: 0;
+	border: 0;
+	background-color: white;
+	margin: 0;
+}
