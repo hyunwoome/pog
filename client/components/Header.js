@@ -3,8 +3,23 @@ import Link from 'next/link';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { blue, lightBlue } from '@material-ui/core/colors';
+import { useState } from 'react';
 
 const Header = () => {
+	const [show, setShow] = useState(false);
+
+	const onClickToggle = () => {
+		setShow(!show);
+	};
+
+	const onBlurToggle = () => {
+		if (show === false) {
+			setShow(show);
+		} else {
+			setShow(!show);
+		}
+	};
+
 	return (
 		<section className={styles.headerContainer}>
 			<div className={styles.logo}>
@@ -12,12 +27,13 @@ const Header = () => {
 					<h1>Pride of Golf</h1>
 				</Link>
 			</div>
-			<ul className={styles.navbar}>
-				<li>
+			{/* {show === true ? ( */}
+			<div className={styles.navbar}>
+				<div>
 					<Link href="/login">
 						<a>로그인</a>
 					</Link>
-				</li>
+				</div>
 				<li>
 					<Link href="/">
 						<a>예약확인</a>
@@ -33,15 +49,13 @@ const Header = () => {
 						<a>후기게시판</a>
 					</Link>
 				</li>
-			</ul>
-			<div className={styles.accountIcon}>
-				<Link href="/">
-					<a>
-						<AccountCircleIcon style={{ color: blue[800] }} />
-					</a>
-				</Link>
 			</div>
-			<button className={styles.menuIcon}>
+			{/* ) : null */}
+			<button
+				className={styles.menuIcon}
+				onClick={onClickToggle}
+				onBlur={onBlurToggle}
+			>
 				<MenuIcon />
 			</button>
 		</section>

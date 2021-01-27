@@ -36,12 +36,29 @@
 }
 
 .copyright {
-	margin-bottom: 0.5rem;
+	margin: rem 0;
 }
 
 .iconCopyright button {
 	padding: 0;
 	border: 0;
 	background-color: white;
-	margin: 0;
+}
+
+.iconCopyrightList {
+	padding: 0;
+}
+
+.iconCopyrightList li {
+	list-style: none;
+}
+
+.iconCopyrightList a {
+	text-decoration: none;
+	color: black;
+}
+
+.assetText {
+	margin-top: 0.5rem;
+	display: flex;
 }

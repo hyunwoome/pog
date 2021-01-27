@@ -2,11 +2,11 @@ import styles from './Footer.module.css';
 import Link from 'next/link';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { useState } from 'react';
-import { Hidden } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { getLuminance } from '@material-ui/core';
 
 const Footer = () => {
 	const [show, setShow] = useState(false);
-	console.log(show);
 
 	const onClickToggle = () => {
 		setShow(!show);
@@ -43,17 +43,19 @@ const Footer = () => {
 				<div className={styles.brandContent}>
 					※ 부득이한 사정에 의해 여행일정이 변경되는 경우 사전 동의를 받습니다.
 				</div>
-				<div className={styles.copyright}>
+				<small className={styles.copyright}>
 					ⓒ 2021 PRIDE OF GOLF SERVICE INC. ALL RIGHTS RESERVED
-				</div>
+				</small>
 				<div className={styles.iconCopyright}>
-					<span>Asset Copyright</span>
-					<button onClick={onClickToggle}>
-						<ArrowDropDownIcon style={{ fontSize: 13 }} />
-					</button>
+					<div className={styles.assetText}>
+						<div>Asset Copyright</div>
+						<button onClick={onClickToggle}>
+							<ExpandMoreIcon style={{ fontSize: 15 }} />
+						</button>
+					</div>
 					{show === true ? (
-						<div className={styles.iconCopyrightList}>
-							<div>
+						<ul className={styles.iconCopyrightList}>
+							<li>
 								Icons made by{' '}
 								<a href="https://www.freepik.com" title="Freepik">
 									Freepik
@@ -62,8 +64,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a href="https://smashicons.com/" title="Smashicons">
 									Smashicons
@@ -72,8 +74,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a href="https://www.freepik.com" title="Freepik">
 									Freepik
@@ -82,8 +84,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">
 									bqlqn
@@ -92,8 +94,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a href="https://www.freepik.com" title="Freepik">
 									Freepik
@@ -102,8 +104,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a
 									href="https://www.flaticon.com/authors/wichaiwi"
@@ -115,8 +117,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a
 									href="https://www.flaticon.com/authors/smashicons"
@@ -128,8 +130,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a
 									href="https://www.flaticon.com/authors/good-ware"
@@ -141,8 +143,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a
 									href="https://www.flaticon.com/authors/mangsaabguru"
@@ -154,8 +156,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-							<div>
+							</li>
+							<li>
 								Icons made by{' '}
 								<a href="https://www.freepik.com" title="Freepik">
 									Freepik
@@ -164,8 +166,8 @@ const Footer = () => {
 								<a href="https://www.flaticon.com/" title="Flaticon">
 									www.flaticon.com
 								</a>
-							</div>
-						</div>
+							</li>
+						</ul>
 					) : null}
 				</div>
 			</section>
