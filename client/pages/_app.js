@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -30,6 +30,11 @@ function MyApp({ Component, pageProps }) {
 				<title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<GlobalStyle />
 			<BaseContainer>
