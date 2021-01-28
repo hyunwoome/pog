@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 
-const Menu = () => {
+const Account = () => {
 	return (
 		<Button>
-			<MenuRoundedIcon />
+			<AccountCircleRoundedIcon />
 		</Button>
 	);
 };
 
 const Button = styled.button`
-	border: 0;
+	border: none;
 	background-color: white;
 	&:hover {
 		cursor: pointer;
 	}
 `;
 
-export default Menu;
+export default Account;

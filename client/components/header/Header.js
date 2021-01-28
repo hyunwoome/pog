@@ -1,26 +1,37 @@
 import styled from 'styled-components';
 import Logo from './Logo';
 import Menu from './Menu';
+import Account from './Account';
 
 const Header = () => {
 	return (
-		<HeaderContainer>
-			<Menu />
-			<Logo />
-		</HeaderContainer>
+		<>
+			<HeaderContainer>
+				<HeaderWrapper>
+					<Menu />
+					<Logo />
+				</HeaderWrapper>
+				<Account />
+			</HeaderContainer>
+		</>
 	);
 };
 
 const HeaderContainer = styled.div`
 	width: 100%;
 	height: 60px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
 	padding: 0 20px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	background-color: white;
+`;
+
+const HeaderWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 `;
 
 export default Header;
