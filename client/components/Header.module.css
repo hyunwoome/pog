@@ -28,12 +28,11 @@
 	position: absolute;
 	z-index: 1;
 	top: 72px;
-	right: 0;
-	width: 100%;
-	border: 1px solid #1876d1;
+	right: 20px;
+	width: 35%;
 	border-radius: 5px;
-	height: 15rem;
-	transition: all 0.5s;
+	height: 10rem;
+	box-shadow: 10px 5px 5px lightgray;
 }
 
 .navbar ul {
@@ -47,12 +46,11 @@
 .navbar a {
 	text-decoration: none;
 	font-weight: 600;
-	color: #1876d1;
+	color: black;
 }
 
-.navbar div:hover {
-	background-color: #1876d1;
-	transition: all 0.5s;
+.navbar .login {
+	color: #1876d1;
 }
 
 .menuIcon:hover {
