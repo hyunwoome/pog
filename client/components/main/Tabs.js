@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Tabs = () => {
 	return (
 		<Tab>
-			<Button primary>초특가</Button>
+			<Button>초특가</Button>
 			<Button>태국</Button>
 			<Button>중국</Button>
 			<Button>일본</Button>
@@ -18,11 +18,13 @@ const Tabs = () => {
 };
 
 const Tab = styled.div`
-	overflow: scroll;
 	background-color: #1876d1;
-	border-radius: 5px;
 	display: flex;
 	justify-content: space-between;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+	padding: 0 10px;
 `;
 
 const Button = styled.button`
@@ -31,9 +33,13 @@ const Button = styled.button`
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;
-	transition: 0.3s;
 	font-size: 1rem;
 	color: white;
+  border-radius: 5px;
+  &:active {
+    background-color: #458ad8;
+  }
+}
 `;
 
 export default Tabs;

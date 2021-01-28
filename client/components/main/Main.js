@@ -11,8 +11,7 @@ const Main = () => {
 
 const MainContainer = styled.div`
 	width: 100%;
-	height: 100vh;
-	padding: 0 20px;
+	height: 80vh;
 	background-color: white;
 `;
 
