@@ -6,6 +6,7 @@ const Title = () => {
 
 const TitleWrapper = styled.div`
 	padding-top: 20px;
+	margin-bottom: 20px;
 	width: 100%;
 	height: 50px;
 	font-size: 1.5rem;

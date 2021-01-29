@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import Link from 'next/link';
 
 const Account = () => {
 	return (
-		<Button>
-			<AccountCircleRoundedIcon />
-		</Button>
+		<Link href="/login">
+			<Button>
+				<a>
+					<AccountCircleRoundedIcon />
+				</a>
+			</Button>
+		</Link>
 	);
 };
 
