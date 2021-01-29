@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Logo from './Logo';
 import Menu from './Menu';
-import MenuList from './MenuList';
 import Account from './Account';
 
 const Header = () => {
@@ -10,7 +9,6 @@ const Header = () => {
 			<HeaderContainer>
 				<HeaderWrapper>
 					<Menu />
-					<MenuList />
 					<Logo />
 				</HeaderWrapper>
 				<Account />

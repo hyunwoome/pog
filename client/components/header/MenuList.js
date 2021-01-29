@@ -44,7 +44,7 @@ const MenuWrapper = styled.div`
 	justify-content: space-around;
 	box-shadow: 1px 2px 5px black;
 	// !: display: none
-	display: none;
+	/* display: none; */
 `;
 
 const MenuItemButton = styled.button`

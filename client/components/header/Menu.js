@@ -1,11 +1,15 @@
 import styled from 'styled-components';
+import MenuList from './MenuList';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 
 const Menu = () => {
 	return (
-		<Button>
-			<MenuRoundedIcon />
-		</Button>
+		<>
+			<Button>
+				<MenuRoundedIcon />
+			</Button>
+			{/* <MenuList /> */}
+		</>
 	);
 };
 
