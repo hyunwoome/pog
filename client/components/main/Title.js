@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const Title = () => {
-	return <TitleWrapper>로그인</TitleWrapper>;
+const Title = ({ title }) => {
+	return <TitleWrapper>{title}</TitleWrapper>;
 };
 
 const TitleWrapper = styled.div`

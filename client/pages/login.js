@@ -6,22 +6,22 @@ const Login = () => {
 	return (
 		<LoginContainer>
 			<LoginWrapper>
-				<Title />
+				<Title title="로그인" />
 				<LoginForm>
-					<LoginInput type="email" placeholder="이메일" />
+					<LoginInput type="number" placeholder="휴대폰번호" />
 					<LoginInput type="password" placeholder="비밀번호" />
 					<LoginChecked type="checkbox" name="remember" />
 					아이디 기억하기
 					<LoginButton>로그인</LoginButton>
 				</LoginForm>
 				<FindAccount>
-					<Link href="/">
+					<Link href="/findID">
 						<TextAnchor>아이디 찾기</TextAnchor>
 					</Link>
-					<Link href="/">
+					<Link href="/findPW">
 						<TextAnchor>비밀번호 찾기</TextAnchor>
 					</Link>
-					<Link href="/">
+					<Link href="/signup">
 						<TextAnchor primary>회원가입</TextAnchor>
 					</Link>
 				</FindAccount>
@@ -32,7 +32,7 @@ const Login = () => {
 
 const LoginContainer = styled.div`
 	width: 100%;
-	height: 80vh;
+	height: 78vh;
 	background-color: white;
 `;
 
@@ -51,7 +51,7 @@ const LoginForm = styled.form`
 const LoginInput = styled.input`
 	margin-bottom: 20px;
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	padding-left: 10px;
 	font-size: 1rem;
 	border-radius: 5px;
@@ -64,7 +64,7 @@ const LoginChecked = styled.input`
 
 const LoginButton = styled.button`
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	border-radius: 5px;
 	border: 0;
 	background-color: #1876d1;
@@ -85,7 +85,7 @@ const FindAccount = styled.div`
 const TextAnchor = styled.a`
 	font-size: 1rem;
 	margin: 0 15px;
-	color: ${(props) => (props.primary ? '#dc034f' : 'black')};
+	color: ${(props) => (props.primary ? '#ea3284' : 'black')};
 	&:hover {
 		cursor: pointer;
 	}
