@@ -35,13 +35,13 @@ const Button = styled.button`
 	padding: 14px 16px;
 	font-size: 1rem;
 	color: white;
-  border-radius: 5px;
+	border-radius: 5px;
   &:hover {
 		opacity: 0.5;
 	}
 
   &:active {
-    background-color: #458ad8;
+		background-color: #ea3284;
   }
 }
 `;

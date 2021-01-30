@@ -56,6 +56,12 @@ const LoginInput = styled.input`
 	font-size: 1rem;
 	border-radius: 5px;
 	border: 1px solid #c4c4c4;
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
 `;
 
 const LoginChecked = styled.input`

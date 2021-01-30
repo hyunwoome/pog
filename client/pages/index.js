@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Title from '../components/main/Title';
 import Tabs from '../components/main/Tabs';
+import MainGridLayout from '../components/main/MainGridLayout';
 
 export default function Home() {
 	return (
@@ -8,6 +9,8 @@ export default function Home() {
 			<HomeWrapper>
 				<Title title={'골프 상품'} />
 				<Tabs />
+				<MainGridLayout />
+				{/* <Title title={'후기 게시판'} /> */}
 			</HomeWrapper>
 		</HomeContainer>
 	);

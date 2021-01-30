@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Account = () => {
 	return (
-		<Link href="/login">
+		<Link href="/mypage">
 			<Button>
 				<a>
 					<AccountCircleRoundedIcon />

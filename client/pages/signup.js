@@ -8,6 +8,7 @@ const Signup = () => {
 				<SignupForm>
 					<Title title="회원가입" />
 					<SignupInput type="text" placeholder="이름" />
+					<SignupInput type="text" placeholder="닉네임" />
 					<SignupInput type="text" placeholder="생년월일 (2020 01 01)" />
 					<SignupInput type="email" placeholder="이메일" />
 					<SignupInput type="number" placeholder="휴대폰 번호" />
@@ -49,6 +50,12 @@ const SignupInput = styled.input`
 	font-size: 1rem;
 	border-radius: 5px;
 	border: 1px solid #c4c4c4;
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
 `;
 
 const ButtonWrapper = styled.div`
