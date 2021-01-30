@@ -1,31 +1,51 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-const MenuList = ({ open }) => {
+const MenuList = ({ open, setOpen }) => {
 	return (
 		<MenuWrapper open={open}>
 			<Link href="/notice">
-				<MenuItemButton>
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
 					<a>공지사항</a>
 				</MenuItemButton>
 			</Link>
 			<Link href="/login">
-				<MenuItemButton>
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
 					<a>로그인</a>
 				</MenuItemButton>
 			</Link>
 			<Link href="/">
-				<MenuItemButton>
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
 					<a>예약확인</a>
 				</MenuItemButton>
 			</Link>
 			<Link href="/">
-				<MenuItemButton>
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
 					<a>견적문의</a>
 				</MenuItemButton>
 			</Link>
 			<Link href="/">
-				<MenuItemButton>
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
 					<a>후기게시판</a>
 				</MenuItemButton>
 			</Link>

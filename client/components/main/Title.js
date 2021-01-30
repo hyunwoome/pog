@@ -5,8 +5,8 @@ const Title = ({ title }) => {
 };
 
 const TitleWrapper = styled.div`
-	padding-top: 20px;
-	margin-bottom: 20px;
+	padding-top: 15px;
+	margin-bottom: 15px;
 	width: 100%;
 	height: 50px;
 	font-size: 1.5rem;

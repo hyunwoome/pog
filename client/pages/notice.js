@@ -13,7 +13,7 @@ const Notice = () => {
 
 const NoticeContainer = styled.div`
 	width: 100%;
-	height: 78vh;
+	height: 80vh;
 	background-color: white;
 `;
 
