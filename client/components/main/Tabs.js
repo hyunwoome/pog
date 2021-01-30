@@ -25,6 +25,7 @@ const Tab = styled.div`
 	overflow-y: hidden;
 	overflow-x: auto;
 	padding: 0 10px;
+	margin-bottom: 5px;
 `;
 
 const Button = styled.button`
