@@ -52,6 +52,7 @@ const BaseContainer = styled.section`
 	background-color: #f3f5f9;
 	margin: auto;
 	font-family: 'Noto Sans KR', sans-serif;
+	overflow: hidden;
 `;
 
 export default MyApp;

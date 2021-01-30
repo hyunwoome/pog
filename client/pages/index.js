@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import Title from '../components/main/Title';
 import Tabs from '../components/main/Tabs';
 
 export default function Home() {
 	return (
 		<HomeContainer>
 			<HomeWrapper>
+				<Title title={'골프 상품'} />
 				<Tabs />
 			</HomeWrapper>
 		</HomeContainer>

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-const MenuList = () => {
+const MenuList = ({ open }) => {
 	return (
-		<MenuWrapper>
-			<Link href="/">
+		<MenuWrapper open={open}>
+			<Link href="/notice">
 				<MenuItemButton>
 					<a>공지사항</a>
 				</MenuItemButton>
 			</Link>
-			<Link href="/">
+			<Link href="/login">
 				<MenuItemButton>
 					<a>로그인</a>
 				</MenuItemButton>
@@ -37,14 +37,14 @@ const MenuWrapper = styled.div`
 	position: absolute;
 	width: 150px;
 	height: 250px;
-	top: 60px;
-	left: 25px;
+	top: 44px;
+	left: 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	box-shadow: 1px 2px 5px black;
-	// !: display: none
-	/* display: none; */
+	border: 1px solid #c4c4c4;
+	transition: transform 0.3s ease-in-out;
+	transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
 `;
 
 const MenuItemButton = styled.button`

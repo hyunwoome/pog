@@ -19,13 +19,14 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
 	width: 100%;
-	height: 60px;
+	height: 45px;
 	padding: 0 20px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	background-color: white;
 	position: relative;
+	border-bottom: 1px solid #c4c4c4;
 `;
 
 const HeaderWrapper = styled.div`

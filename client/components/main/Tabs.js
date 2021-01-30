@@ -36,6 +36,10 @@ const Button = styled.button`
 	font-size: 1rem;
 	color: white;
   border-radius: 5px;
+  &:hover {
+		opacity: 0.5;
+	}
+
   &:active {
     background-color: #458ad8;
   }

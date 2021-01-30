@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import MenuList from './MenuList';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
+import { useState } from 'react';
 
 const Menu = () => {
+	const [open, setOpen] = useState(false);
 	return (
 		<>
-			<Button>
+			<Button onClick={() => setOpen(!open)}>
 				<MenuRoundedIcon />
 			</Button>
-			{/* <MenuList /> */}
+			<MenuList open={open} setOpen={setOpen} />
 		</>
 	);
 };
@@ -18,6 +20,7 @@ const Button = styled.button`
 	background-color: white;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 `;
 
