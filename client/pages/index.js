@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Title from '../components/main/Title';
 import Tabs from '../components/main/Tabs';
 import MainGridLayout from '../components/main/MainGridLayout';
+import MainReviewLayout from '../components/main/MainReviewLayout';
 
 export default function Home() {
 	return (
@@ -10,7 +11,8 @@ export default function Home() {
 				<Title title={'골프 상품'} />
 				<Tabs />
 				<MainGridLayout />
-				{/* <Title title={'후기 게시판'} /> */}
+				<Title title={'후기 게시판'} />
+				<MainReviewLayout />
 			</HomeWrapper>
 		</HomeContainer>
 	);
@@ -18,7 +20,6 @@ export default function Home() {
 
 const HomeContainer = styled.div`
 	width: 100%;
-	height: 80vh;
 	background-color: white;
 `;
 

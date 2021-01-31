@@ -49,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
 
 const BaseContainer = styled.section`
 	max-width: 1024px;
-	background-color: #f3f5f9;
 	margin: auto;
 	font-family: 'Noto Sans KR', sans-serif;
 	overflow: hidden;

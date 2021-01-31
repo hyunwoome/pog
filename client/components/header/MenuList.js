@@ -54,6 +54,7 @@ const MenuList = ({ open, setOpen }) => {
 };
 
 const MenuWrapper = styled.div`
+	z-index: 1;
 	position: absolute;
 	width: 150px;
 	height: 250px;

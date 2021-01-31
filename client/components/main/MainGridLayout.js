@@ -1,19 +1,11 @@
 import styled from 'styled-components';
-import InputIcon from '@material-ui/icons/Input';
 import GridItem from './GridItem';
-import Link from 'next/link';
+import MoreLink from './MoreLink';
 
 export default function MainGridLayout() {
 	return (
 		<MainGridContainer>
-			<ItemDetailLink>
-				<Link href="/">
-					<Anchor>
-						상품 더보기 &nbsp;
-						<InputIcon style={{ fontSize: '1.3rem' }} />
-					</Anchor>
-				</Link>
-			</ItemDetailLink>
+			<MoreLink href="/" text={'해당 상품 더보기'} />
 			<MainGridWrapper>
 				<GridItem />
 				<GridItem />
@@ -25,7 +17,6 @@ export default function MainGridLayout() {
 
 const MainGridContainer = styled.div`
 	width: 100%;
-	height: 30vh;
 	background-color: white;
 `;
 
@@ -38,20 +29,5 @@ const MainGridWrapper = styled.div`
 
 	@media screen and (max-width: 400px) {
 		grid-template-columns: 1fr 1fr;
-	}
-`;
-
-const ItemDetailLink = styled.div`
-	padding-right: 15px;
-	display: flex;
-	justify-content: flex-end;
-`;
-
-const Anchor = styled.a`
-	display: flex;
-	font-size: 0.8rem;
-	&:hover {
-		cursor: pointer;
-		opacity: 0.5;
 	}
 `;
