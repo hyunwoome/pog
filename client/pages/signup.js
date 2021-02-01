@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Title from '../components/main/Title';
 
-const Signup = () => {
+export default function Signup() {
 	return (
 		<SignupContainer>
 			<SignupWrapper>
@@ -22,7 +22,7 @@ const Signup = () => {
 			</SignupWrapper>
 		</SignupContainer>
 	);
-};
+}
 
 const SignupContainer = styled.div`
 	width: 100%;
@@ -73,6 +73,7 @@ const BackButton = styled.button`
 	font-size: 1.2rem;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 	margin-bottom: 25px;
 `;
@@ -88,8 +89,7 @@ const SignupButton = styled.button`
 	margin-left: 10px;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 	margin-bottom: 25px;
 `;
-
-export default Signup;

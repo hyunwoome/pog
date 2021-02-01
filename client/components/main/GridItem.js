@@ -26,7 +26,7 @@ export default function GridItem() {
 
 const GridItemContainer = styled.div`
 	border: 1px solid #c4c4c4;
-	box-shadow: 3px 3px 5px gray;
+	box-shadow: 1px 1px 5px gray;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;

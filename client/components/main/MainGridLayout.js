@@ -18,6 +18,7 @@ export default function MainGridLayout() {
 const MainGridContainer = styled.div`
 	width: 100%;
 	background-color: white;
+	margin-bottom: 50px;
 `;
 
 const MainGridWrapper = styled.div`

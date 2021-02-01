@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Title from '../components/main/Title';
 
-const FindID = () => {
+export default function FindID() {
 	return (
 		<FindIDContainer>
 			<FindIDWrapper>
@@ -18,7 +18,7 @@ const FindID = () => {
 			</FindIDWrapper>
 		</FindIDContainer>
 	);
-};
+}
 
 const FindIDContainer = styled.div`
 	width: 100%;
@@ -63,6 +63,7 @@ const BackButton = styled.button`
 	font-size: 1.2rem;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 	margin-bottom: 25px;
 `;
@@ -78,8 +79,7 @@ const FindIDButton = styled.button`
 	margin-left: 10px;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 	margin-bottom: 25px;
 `;
-
-export default FindID;

@@ -78,6 +78,7 @@ const LoginButton = styled.button`
 	font-size: 1.2rem;
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 	margin-bottom: 25px;
 `;
@@ -94,6 +95,7 @@ const TextAnchor = styled.a`
 	color: ${(props) => (props.primary ? '#ea3284' : 'black')};
 	&:hover {
 		cursor: pointer;
+		opacity: 0.5;
 	}
 `;
 
