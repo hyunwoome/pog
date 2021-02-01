@@ -87,9 +87,9 @@ const MenuWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	box-shadow: 1px 1px 5px gray;
+	box-shadow: 1px 1px 2px gray;
 	transition: transform 0.3s ease-in-out;
-	transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+	transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-110%)')};
 `;
 
 const MenuItemButton = styled.button`

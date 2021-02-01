@@ -18,29 +18,29 @@ const Tabs = () => {
 };
 
 const Tab = styled.div`
-	background-color: #1876d1;
+	background-color: #edf1f7;
 	display: flex;
-	justify-content: space-between;
 	white-space: nowrap;
 	overflow-y: hidden;
 	overflow-x: auto;
-	padding: 0 10px;
-	margin-bottom: 5px;
+	padding: 5px 15px;
+	margin: 10px 0 5px 0;
 `;
 
 const Button = styled.button`
-	background-color: #1876d1;
+	background-color: white;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 14px 16px;
+	padding: 12px 15px;
 	font-size: 1rem;
-	color: white;
 	border-radius: 5px;
+	margin-right: 10px;
+	border: 1px solid #e1e8ef;
+	box-shadow: 1px 1px 2px gray;
   &:hover {
 		opacity: 0.5;
 	}
-
   &:active {
 		background-color: #ea3284;
   }

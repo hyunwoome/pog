@@ -17,7 +17,7 @@ export default function MainReviewLayout() {
 
 const MainReviewContainer = styled.div`
 	width: 100%;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const MainReviewWrapper = styled.div`

@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
 		overflow: auto;
-		background-color: #f5f5f5
+		background-color: #edf1f7
   }
   a {
     color: inherit;

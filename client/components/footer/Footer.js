@@ -36,7 +36,7 @@ const FooterContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const FooterMenu = styled.div`

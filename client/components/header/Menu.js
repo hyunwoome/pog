@@ -36,7 +36,7 @@ export default function Menu() {
 const Button = styled.button`
 	border: 0;
 	margin-top: 3px;
-	background-color: white;
+	background-color: #edf1f7;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;

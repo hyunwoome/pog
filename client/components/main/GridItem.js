@@ -25,7 +25,11 @@ export default function GridItem() {
 }
 
 const GridItemContainer = styled.div`
+	background-color: white;
+	border-radius: 5px;
 	margin-bottom: 10px;
+	border: 1px solid #e1e8ef;
+	box-shadow: 1px 1px 2px gray;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;
@@ -33,11 +37,12 @@ const GridItemContainer = styled.div`
 `;
 
 const GridImage = styled(Image)`
-	border-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 `;
 
 const TextWrapper = styled.div`
-	padding-top: 10px;
+	padding: 10px;
 `;
 
 const CountryNameText = styled.div`

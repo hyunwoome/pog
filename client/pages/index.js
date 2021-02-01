@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<HomeContainer>
 			<HomeWrapper>
-				<Title title={'골프 상품'} />
+				<Title title={'해외 골프 상품'} />
 				<Tabs />
 				<MainGridLayout />
 				<Title title={'후기 게시판'} />
@@ -20,7 +20,7 @@ export default function Home() {
 
 const HomeContainer = styled.div`
 	width: 100%;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const HomeWrapper = styled.div`

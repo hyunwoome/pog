@@ -24,8 +24,7 @@ const HeaderContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	background-color: white;
-	/* border-bottom: 1px solid #c4c4c4; */
+	background-color: #edf1f7;
 	position: relative;
 `;
 

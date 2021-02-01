@@ -30,13 +30,15 @@ export default function ReviewItem() {
 }
 
 const ReviewItemContainer = styled.div`
+	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
-	box-shadow: 1px 1px 5px gray;
+	box-shadow: 1px 1px 2px gray;
 	border-radius: 10px;
 	padding: 10px;
+	border: 1px solid #e1e8ef;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;

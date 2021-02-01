@@ -21,7 +21,7 @@ const Button = styled.button`
 	padding: 0.5rem 1rem 0.5rem 1rem;
 	flex: 2;
 	text-align: left;
-	box-shadow: 2px 2px 5px gray;
+	box-shadow: 1px 1px 2px gray;
 
 	&:hover {
 		cursor: pointer;
