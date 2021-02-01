@@ -13,6 +13,7 @@ export default function MoreLink({ href, text }) {
 
 const MoreLinkContainer = styled.div`
 	padding-right: 15px;
+	margin: 10px 0;
 	display: flex;
 	justify-content: flex-end;
 `;

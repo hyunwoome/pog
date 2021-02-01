@@ -7,16 +7,16 @@ export default function GridItem() {
 		<Link href="/">
 			<a>
 				<GridItemContainer>
-					<Image
+					<GridImage
 						src="/images/artitaya.jpg"
-						width={286}
+						width={250}
 						height={180}
 						layout="responsive"
 					/>
 					<TextWrapper>
 						<CountryNameText>태국</CountryNameText>
 						<CCNameText>아티타야 CC</CCNameText>
-						<PriceText>₩ 250,000</PriceText>
+						<PriceText>250,000 원~</PriceText>
 					</TextWrapper>
 				</GridItemContainer>
 			</a>
@@ -25,16 +25,19 @@ export default function GridItem() {
 }
 
 const GridItemContainer = styled.div`
-	border: 1px solid #c4c4c4;
-	box-shadow: 1px 1px 5px gray;
+	margin-bottom: 10px;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;
 	}
 `;
 
+const GridImage = styled(Image)`
+	border-radius: 5px;
+`;
+
 const TextWrapper = styled.div`
-	padding: 10px;
+	padding-top: 10px;
 `;
 
 const CountryNameText = styled.div`
@@ -43,9 +46,7 @@ const CountryNameText = styled.div`
 `;
 
 const CCNameText = styled.div`
-	font-size: 1rem;
+	font-size: 0.9rem;
 `;
 
-const PriceText = styled.div`
-	font-size: 1.2rem;
-`;
+const PriceText = styled.div``;

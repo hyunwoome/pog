@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Logo from './Logo';
 import Menu from './Menu';
-import Account from './Account';
+import Logo from './Logo';
+import CalendarButton from './CalendarButton';
 
 const Header = () => {
 	return (
@@ -10,8 +10,8 @@ const Header = () => {
 				<HeaderWrapper>
 					<Menu />
 					<Logo />
+					<CalendarButton />
 				</HeaderWrapper>
-				<Account />
 			</HeaderContainer>
 		</>
 	);
@@ -19,14 +19,14 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
 	width: 100%;
-	height: 45px;
-	padding: 0 20px;
+	height: 60px;
+	padding: 0 10px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	background-color: white;
+	/* border-bottom: 1px solid #c4c4c4; */
 	position: relative;
-	border-bottom: 1px solid #c4c4c4;
 `;
 
 const HeaderWrapper = styled.div`

@@ -8,25 +8,18 @@ export default function ReviewItem() {
 			<a>
 				<ReviewItemContainer>
 					<ImageWrapper>
-						<Image
+						<ReviewImage
 							src="/images/chiangmai.jpg"
-							width={80}
-							height={50}
-							layout="responsive"
+							width={200}
+							height={150}
+							layout="fixed"
 						/>
 					</ImageWrapper>
 					<TextWrapper>
 						<CountryNameText>태국</CountryNameText>
 						<CCNameText>&nbsp; 치앙마이 CC</CCNameText>
 						<ReviewRating>&nbsp; 4.5 / 5</ReviewRating>
-						<ReviewContent>
-							골프장이 깨끗하고 친절합니다.골프장이 깨끗하고 친절합니다.골프장이
-							깨끗하고 친절합니다.골프장이 깨끗하고 친절합니다.골프장이 깨끗하고
-							친절합니다.골프장이 깨끗하고 친절합니다.골프장이 깨끗하고
-							친절합니다.골프장이 깨끗하고 친절합니다.골프장이 깨끗하고
-							친절합니다.골프장이 깨끗하고 친절합니다.골프장이 깨끗하고
-							친절합니다.골프장이 깨끗하고 친절합니다.
-						</ReviewContent>
+						<ReviewContent>골프장이 깨끗하고 친절합니다.</ReviewContent>
 						<ReviewDate>2021-05-05 14:30:28</ReviewDate>
 						<Nickname>&nbsp; 김남윤</Nickname>
 					</TextWrapper>
@@ -38,11 +31,11 @@ export default function ReviewItem() {
 
 const ReviewItemContainer = styled.div`
 	width: 100%;
-	border: 1px solid #c4c4c4;
 	display: flex;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	box-shadow: 1px 1px 5px gray;
+	border-radius: 10px;
 	padding: 10px;
 	&:hover {
 		cursor: pointer;
@@ -51,11 +44,13 @@ const ReviewItemContainer = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-	width: 800px;
-
 	@media screen and (max-width: 571px) {
 		display: none;
 	}
+`;
+
+const ReviewImage = styled(Image)`
+	border-radius: 5px;
 `;
 
 const TextWrapper = styled.div`

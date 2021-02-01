@@ -18,7 +18,6 @@ export default function MainGridLayout() {
 const MainGridContainer = styled.div`
 	width: 100%;
 	background-color: white;
-	margin-bottom: 50px;
 `;
 
 const MainGridWrapper = styled.div`
@@ -26,7 +25,7 @@ const MainGridWrapper = styled.div`
 	padding: 5px 1rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 1rem;
+	gap: 0.5rem;
 
 	@media screen and (max-width: 400px) {
 		grid-template-columns: 1fr 1fr;

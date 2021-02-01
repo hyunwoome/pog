@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from '../components/main/Title';
+import Title from '../components/common/Title';
 import Tabs from '../components/main/Tabs';
 import MainGridLayout from '../components/main/MainGridLayout';
 import MainReviewLayout from '../components/main/MainReviewLayout';
@@ -25,4 +25,5 @@ const HomeContainer = styled.div`
 
 const HomeWrapper = styled.div`
 	width: 100%;
+	position: relative;
 `;

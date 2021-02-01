@@ -6,7 +6,7 @@ const Logo = () => {
 		<div>
 			<Link href="/">
 				<a>
-					<LogoText>Pride Of Golf</LogoText>
+					<LogoText>Pride of Golf</LogoText>
 				</a>
 			</Link>
 		</div>
@@ -14,7 +14,7 @@ const Logo = () => {
 };
 
 const LogoText = styled.h1`
-	margin-left: 20px;
+	margin-left: 10px;
 	font-size: 1.3rem;
 	font-family: 'Poppins', sans-serif;
 	&:hover {

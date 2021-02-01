@@ -9,8 +9,18 @@ const MenuList = ({ open, setOpen }) => {
 					onClick={() => {
 						setOpen(!open);
 					}}
+					style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}
 				>
 					<a>공지사항</a>
+				</MenuItemButton>
+			</Link>
+			<Link href="/login">
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
+					<a>마이페이지</a>
 				</MenuItemButton>
 			</Link>
 			<Link href="/login">
@@ -40,10 +50,23 @@ const MenuList = ({ open, setOpen }) => {
 					<a>견적문의</a>
 				</MenuItemButton>
 			</Link>
+			<Link href="/calendar">
+				<MenuItemButton
+					onClick={() => {
+						setOpen(!open);
+					}}
+				>
+					<a>내가찾는 해외골프</a>
+				</MenuItemButton>
+			</Link>
 			<Link href="/">
 				<MenuItemButton
 					onClick={() => {
 						setOpen(!open);
+					}}
+					style={{
+						borderBottomLeftRadius: '5px',
+						borderBottomRightRadius: '5px',
 					}}
 				>
 					<a>후기게시판</a>
@@ -54,16 +77,17 @@ const MenuList = ({ open, setOpen }) => {
 };
 
 const MenuWrapper = styled.div`
+	border-radius: 5px;
 	z-index: 1;
 	position: absolute;
-	width: 150px;
-	height: 250px;
-	top: 44px;
+	width: 180px;
+	height: 350px;
+	top: 55px;
 	left: 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border: 1px solid #c4c4c4;
+	box-shadow: 1px 1px 5px gray;
 	transition: transform 0.3s ease-in-out;
 	transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
 `;
