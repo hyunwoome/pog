@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from '../components/main/Title';
+import Title from '../components/common/Title';
 import Link from 'next/link';
 
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
 const LoginContainer = styled.div`
 	width: 100%;
 	height: 80vh;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const LoginWrapper = styled.div`
@@ -46,6 +46,7 @@ const LoginWrapper = styled.div`
 
 const LoginForm = styled.form`
 	width: 100%;
+	margin-top: 20px;
 `;
 
 const LoginInput = styled.input`
@@ -56,6 +57,7 @@ const LoginInput = styled.input`
 	font-size: 1rem;
 	border-radius: 5px;
 	border: 1px solid #c4c4c4;
+	box-shadow: 1px 1px 2px gray;
 	&::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 	}
@@ -76,6 +78,7 @@ const LoginButton = styled.button`
 	background-color: #1876d1;
 	color: white;
 	font-size: 1.2rem;
+	box-shadow: 1px 1px 2px gray;
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;

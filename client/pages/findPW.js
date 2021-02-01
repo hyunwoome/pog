@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import Title from '../components/main/Title';
+import Title from '../components/common/Title';
 
 export default function FindPW() {
 	return (
 		<FindIDContainer>
 			<FindIDWrapper>
+				<Title title="비밀번호 찾기" />
 				<FindIDForm>
-					<Title title="비밀번호 찾기" />
 					<FindIDInput type="number" placeholder="휴대폰 번호" />
 					<FindIDInput type="email" placeholder="이메일" />
 					<ButtonWrapper>
@@ -22,7 +22,7 @@ export default function FindPW() {
 const FindIDContainer = styled.div`
 	width: 100%;
 	height: 78vh;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const FindIDWrapper = styled.div`
@@ -35,6 +35,7 @@ const FindIDWrapper = styled.div`
 
 const FindIDForm = styled.form`
 	width: 100%;
+	margin-top: 20px;
 `;
 
 const FindIDInput = styled.input`
@@ -45,6 +46,7 @@ const FindIDInput = styled.input`
 	font-size: 1rem;
 	border-radius: 5px;
 	border: 1px solid #c4c4c4;
+	box-shadow: 1px 1px 2px gray;
 `;
 
 const ButtonWrapper = styled.div`
@@ -60,6 +62,8 @@ const BackButton = styled.button`
 	background-color: white;
 	color: black;
 	font-size: 1.2rem;
+	box-shadow: 1px 1px 2px gray;
+
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;
@@ -76,6 +80,8 @@ const FindIDButton = styled.button`
 	color: white;
 	font-size: 1.2rem;
 	margin-left: 10px;
+	box-shadow: 1px 1px 2px gray;
+
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;

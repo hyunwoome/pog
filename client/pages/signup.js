@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import Title from '../components/main/Title';
+import Title from '../components/common/Title';
 
 export default function Signup() {
 	return (
 		<SignupContainer>
 			<SignupWrapper>
+				<Title title="회원가입" />
 				<SignupForm>
-					<Title title="회원가입" />
 					<SignupInput type="text" placeholder="이름" />
 					<SignupInput type="text" placeholder="닉네임" />
 					<SignupInput type="text" placeholder="생년월일 (2020 01 01)" />
@@ -27,7 +27,7 @@ export default function Signup() {
 const SignupContainer = styled.div`
 	width: 100%;
 	height: 78vh;
-	background-color: white;
+	background-color: #edf1f7;
 `;
 
 const SignupWrapper = styled.div`
@@ -40,6 +40,7 @@ const SignupWrapper = styled.div`
 
 const SignupForm = styled.form`
 	width: 100%;
+	margin-top: 20px;
 `;
 
 const SignupInput = styled.input`
@@ -50,6 +51,8 @@ const SignupInput = styled.input`
 	font-size: 1rem;
 	border-radius: 5px;
 	border: 1px solid #c4c4c4;
+	box-shadow: 1px 1px 2px gray;
+
 	&::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 	}
@@ -71,6 +74,8 @@ const BackButton = styled.button`
 	background-color: white;
 	color: black;
 	font-size: 1.2rem;
+	box-shadow: 1px 1px 2px gray;
+
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;
@@ -87,6 +92,8 @@ const SignupButton = styled.button`
 	color: white;
 	font-size: 1.2rem;
 	margin-left: 10px;
+	box-shadow: 1px 1px 2px gray;
+
 	&:hover {
 		cursor: pointer;
 		opacity: 0.5;
