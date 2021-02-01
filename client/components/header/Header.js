@@ -19,7 +19,7 @@ const Header = () => {
 
 const HeaderContainer = styled.div`
 	width: 100%;
-	height: 60px;
+	height: 70px;
 	padding: 0 10px;
 	display: flex;
 	align-items: center;

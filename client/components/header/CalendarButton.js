@@ -15,10 +15,11 @@ export default function CalendarButton() {
 
 const Button = styled.button`
 	margin-left: 15px;
+	height: 40px;
 	background-color: white;
 	border: 0;
 	border-radius: 20px;
-	padding: 0.5rem 1rem 0.5rem 1rem;
+	padding: 0.5rem 0 0.5rem 1.5rem;
 	flex: 2;
 	text-align: left;
 	box-shadow: 1px 1px 2px gray;
@@ -36,6 +37,6 @@ const ButtonAnchor = styled.a`
 
 const SearchCustomIcon = styled(SearchIcon)`
 	position: absolute;
-	top: 20px;
+	top: 25px;
 	right: 30px;
 `;
