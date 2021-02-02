@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Title from '../components/common/Title';
 import Link from 'next/link';
+import TextField from '../components/common/TextField';
+import PhoneIcon from '@material-ui/icons/Phone';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 const Login = () => {
 	return (
@@ -8,8 +11,20 @@ const Login = () => {
 			<LoginWrapper>
 				<Title title="로그인" />
 				<LoginForm>
-					<LoginInput type="number" placeholder="휴대폰번호" />
-					<LoginInput type="password" placeholder="비밀번호" />
+					<TextField
+						type={'number'}
+						placeholder={'휴대폰 번호'}
+						Icon={PhoneIcon}
+						color={'action'}
+						fontSize={'small'}
+					/>
+					<TextField
+						type={'password'}
+						placeholder={'비밀번호'}
+						Icon={LockOpenIcon}
+						color={'action'}
+						fontSize={'small'}
+					/>
 					<LoginChecked type="checkbox" name="remember" />
 					아이디 기억하기
 					<LoginButton>로그인</LoginButton>
@@ -47,23 +62,6 @@ const LoginWrapper = styled.div`
 const LoginForm = styled.form`
 	width: 100%;
 	margin-top: 20px;
-`;
-
-const LoginInput = styled.input`
-	margin-bottom: 20px;
-	width: 100%;
-	height: 50px;
-	padding-left: 10px;
-	font-size: 1rem;
-	border-radius: 5px;
-	border: 1px solid #c4c4c4;
-	box-shadow: 1px 1px 2px gray;
-	&::-webkit-outer-spin-button {
-		-webkit-appearance: none;
-	}
-	&::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-	}
 `;
 
 const LoginChecked = styled.input`

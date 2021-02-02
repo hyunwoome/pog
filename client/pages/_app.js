@@ -36,8 +36,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
 		overflow: auto;
-		background-color: #edf1f7
+		background-color: #ffffff;
   }
+	
   a {
     color: inherit;
     text-decoration: none; 
