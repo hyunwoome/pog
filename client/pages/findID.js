@@ -59,7 +59,7 @@ const BackButton = styled.button`
 	width: 100%;
 	height: 50px;
 	border-radius: 5px;
-	border: 1px solid #458ad8;
+	border: 1px solid #1876d1;
 	background-color: white;
 	color: black;
 	font-size: 1.2rem;
@@ -76,7 +76,7 @@ const FindIDButton = styled.button`
 	height: 50px;
 	border-radius: 5px;
 	border: 0;
-	background-color: #458ad8;
+	background-color: #1876d1;
 	color: white;
 	font-size: 1.2rem;
 	margin-left: 10px;

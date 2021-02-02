@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<title>Create Next App</title>
+				<title>Pride of Golf</title>
 				<link rel="icon" href="/favicon.ico" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
