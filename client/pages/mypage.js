@@ -5,9 +5,8 @@ export default function MyPage() {
 	return (
 		<MyPageContainer>
 			<MyPageWrapper>
-				<MyPageForm>
-					<Title title="마이페이지" />
-				</MyPageForm>
+				<Title title="마이페이지" />
+				<MyPageForm></MyPageForm>
 			</MyPageWrapper>
 		</MyPageContainer>
 	);
