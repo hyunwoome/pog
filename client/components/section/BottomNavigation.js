@@ -76,6 +76,7 @@ const BottomNavigationContainer = styled.div`
 	display: flex;
 	justify-content: space-around;
 	transition: bottom 0.3s;
+	background-color: var(--color-background);
 `;
 
 const IconTitleContainer = styled.div`

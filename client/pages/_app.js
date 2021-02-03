@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import Header from '../components/section/Header';
 import BottomNavigation from '../components/section/BottomNavigation';
+import ScrollTopButton from '../components/component/ScrollTopButton';
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
 			<GlobalStyle />
 			<BaseContainer>
 				<Header />
+				<ScrollTopButton />
 				<Component {...pageProps} />
 				<BottomNavigation />
 			</BaseContainer>
@@ -33,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   body {
   padding: 0;
   margin: 0;
-	background-color: var(---color-background);
+	background-color: var(--color-subBackground);
 	font-family: 'Noto Sans KR', sans-serif;
 
 	/* Color Variable */
@@ -62,6 +64,6 @@ a {
 
 const BaseContainer = styled.div`
 	max-width: 1024px;
-	height: 200vh;
+	height: 3000px;
 	margin: auto;
 `;
