@@ -4,10 +4,30 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import CalendarTodayRoundedIcon from '@material-ui/icons/CalendarTodayRounded';
+import { useState, useEffect } from 'react';
 
 export default function BottomNavigation() {
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+	const [visible, setVisible] = useState(true);
+
+	const handleScroll = () => {
+		// 현재 스크롤 위치
+		const currentScrollPos = window.pageYOffset;
+
+		// 위치 정보에 기반한 상태
+		setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+		// 새로운 스크롤 위치 상태 설정
+		setPrevScrollPos(currentScrollPos);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [prevScrollPos, visible, handleScroll]);
+
 	return (
-		<BottomNavigationContainer>
+		<BottomNavigationContainer style={{ bottom: visible ? '0' : '-72px' }}>
 			<Link href="/">
 				<IconTitleContainer>
 					<HomeRoundedIcon color="action" />
@@ -55,6 +75,7 @@ const BottomNavigationContainer = styled.div`
 	margin: auto;
 	display: flex;
 	justify-content: space-around;
+	transition: bottom 0.3s;
 `;
 
 const IconTitleContainer = styled.div`
