@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import Head from 'next/head';
+import Header from '../components/section/Header';
+import BottomNavigation from '../components/section/BottomNavigation';
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -14,7 +17,11 @@ function MyApp({ Component, pageProps }) {
 				/>
 			</Head>
 			<GlobalStyle />
-			<Component {...pageProps} />;
+			<BaseContainer>
+				<Header />
+				<Component {...pageProps} />
+				<BottomNavigation />
+			</BaseContainer>
 		</div>
 	);
 }
@@ -26,6 +33,23 @@ const GlobalStyle = createGlobalStyle`
   body {
   padding: 0;
   margin: 0;
+	background-color: var(---color-background);
+	font-family: 'Noto Sans KR', sans-serif;
+
+	/* Color Variable */
+
+	--color-background: #ffffff;
+	--color-subBackground: #f3f5f9;
+	--color-primary: #9ccc65;
+	--color-primary-dark: #8bc34a;
+	--color-secondary: #ff8a65;
+	--color-font: #000000;
+	--color-border: #e0e0e0;
+
+	/* Font Variable */
+
+	--font-caption: 0.75rem;
+	
 }
 a {
   color: inherit;
@@ -34,4 +58,9 @@ a {
 * {
   box-sizing: border-box;
 }
+`;
+
+const BaseContainer = styled.div`
+	max-width: 1024px;
+	margin: auto;
 `;
