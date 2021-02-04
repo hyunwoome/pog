@@ -39,6 +39,7 @@ const TopButton = styled.button`
 	z-index: 100;
 	border-radius: 50%;
 	padding: 8px;
+	display: flex;
 	border: 1px solid var(--color-border);
 	background-color: var(--color-background);
 	box-shadow: 1px 1px 3px gray;
@@ -46,7 +47,6 @@ const TopButton = styled.button`
 `;
 
 const Fade = styled.div`
-	display: inline-block;
 	visibility: ${(props) => (props.out ? 'visible' : 'hidden')};
 	animation: ${(props) => (props.out ? fadeIn : fadeOut)} 0.5s;
 	transition: 0.5s;
