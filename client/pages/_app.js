@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Header from '../components/section/Header';
-import BottomNavigation from '../components/section/BottomNavigation';
 import ScrollTopButton from '../components/component/ScrollTopButton';
 
 export default function MyApp({ Component, pageProps }) {
@@ -19,10 +17,8 @@ export default function MyApp({ Component, pageProps }) {
 			</Head>
 			<GlobalStyle />
 			<BaseContainer>
-				<Header />
-				<ScrollTopButton />
 				<Component {...pageProps} />
-				<BottomNavigation />
+				<ScrollTopButton />
 			</BaseContainer>
 		</div>
 	);

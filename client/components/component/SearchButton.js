@@ -16,7 +16,7 @@ export default function SearchButton() {
 
 const Button = styled.button`
 	position: relative;
-	margin-left: 8px;
+	margin-left: 16px;
 	flex: 2;
 	height: 40px;
 	/* Special */

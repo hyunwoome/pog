@@ -19,7 +19,6 @@ const HeaderContainer = styled.header`
 	height: 64px;
 	display: flex;
 	align-items: center;
-	padding: 0 8px;
-	border-bottom: 1px solid var(--color-border);
+	padding: 0 16px;
 	background-color: var(--color-background);
 `;
