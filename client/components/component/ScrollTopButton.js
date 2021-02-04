@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import ArrowUpwardRoundedIcon from '@material-ui/icons/ArrowUpwardRounded';
 import { useState, useEffect } from 'react';
 
@@ -22,12 +22,11 @@ export default function ScrollTopButton() {
 	}, [showScroll, checkScrollTop]);
 
 	return (
-		<TopButton
-			onClick={scrollTop}
-			style={{ display: showScroll ? 'flex' : 'none' }}
-		>
-			<ArrowUpwardRoundedIcon />
-		</TopButton>
+		<Fade out={showScroll}>
+			<TopButton onClick={scrollTop}>
+				<ArrowUpwardRoundedIcon color="action" />
+			</TopButton>
+		</Fade>
 	);
 }
 
@@ -38,13 +37,28 @@ const TopButton = styled.button`
 	align-items: center;
 	justify-content: center;
 	z-index: 100;
-	border-radius: 10px;
+	border-radius: 50%;
 	padding: 8px;
 	border: 1px solid var(--color-border);
 	background-color: var(--color-background);
 	box-shadow: 1px 1px 3px gray;
 	cursor: pointer;
-	animation: ${(props) => (props.out ? fadeOut : fadeIn)} 0.5s;
+`;
+
+const Fade = styled.div`
+	display: inline-block;
+	visibility: ${(props) => (props.out ? 'visible' : 'hidden')};
+	animation: ${(props) => (props.out ? fadeIn : fadeOut)} 0.5s;
+	transition: 0.5s;
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 `;
 
 const fadeIn = keyframes`
@@ -55,12 +69,3 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 }`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`;
