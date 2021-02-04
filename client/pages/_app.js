@@ -5,7 +5,7 @@ import Header from '../components/section/Header';
 import BottomNavigation from '../components/section/BottomNavigation';
 import ScrollTopButton from '../components/component/ScrollTopButton';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
 	return (
 		<div>
 			<Head>
@@ -27,8 +27,6 @@ function MyApp({ Component, pageProps }) {
 		</div>
 	);
 }
-
-export default MyApp;
 
 const GlobalStyle = createGlobalStyle`
   html,

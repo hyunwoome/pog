@@ -12,7 +12,7 @@ export default function Header() {
 		const currentScrollPos = window.pageYOffset;
 
 		// 위치 정보에 기반한 상태
-		setVisible(prevScrollPos < currentScrollPos || currentScrollPos < 10);
+		setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
 
 		// 새로운 스크롤 위치 상태 설정
 		setPrevScrollPos(currentScrollPos);
@@ -40,8 +40,8 @@ const HeaderContainer = styled.header`
 	display: flex;
 	align-items: center;
 	padding: 0 8px;
-	border-bottom: 1px solid #e0e0e0;
-	background-color: #ffffff;
+	border-bottom: 1px solid var(--color-border);
+	background-color: var(--color-background);
 	position: fixed;
 	left: 0;
 	right: 0;

@@ -15,7 +15,7 @@ export default function BottomNavigation() {
 		const currentScrollPos = window.pageYOffset;
 
 		// 위치 정보에 기반한 상태
-		setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+		setVisible(prevScrollPos < currentScrollPos || currentScrollPos < 10);
 
 		// 새로운 스크롤 위치 상태 설정
 		setPrevScrollPos(currentScrollPos);
