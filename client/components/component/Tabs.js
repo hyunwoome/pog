@@ -58,7 +58,6 @@ const TabsButton = styled.button`
 	background-color: var(--color-background);
 	height: 48px;
 	width: 96px;
-
 	@media screen and (max-width: 400px) {
 		width: 80px;
 	}
