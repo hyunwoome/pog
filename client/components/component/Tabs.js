@@ -40,6 +40,7 @@ const TabsContainer = styled.nav`
 
 const TabsUnorderedList = styled.ul`
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	white-space: nowrap;
 	overflow-y: hidden;
@@ -58,6 +59,10 @@ const TabsButton = styled.button`
 	background-color: var(--color-background);
 	height: 48px;
 	width: 96px;
+	cursor: pointer;
+	&:hover {
+		background-color: var(--color-border);
+	}
 	@media screen and (max-width: 400px) {
 		width: 80px;
 	}

@@ -3,8 +3,9 @@ import Link from 'next/link';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
-import CalendarTodayRoundedIcon from '@material-ui/icons/CalendarTodayRounded';
+import EventAvailableRoundedIcon from '@material-ui/icons/EventAvailableRounded';
 import { useState, useEffect } from 'react';
+import MenuList from '../component/MenuList';
 
 export default function BottomNavigation() {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -28,6 +29,7 @@ export default function BottomNavigation() {
 
 	return (
 		<BottomNavigationContainer style={{ bottom: visible ? '0' : '-72px' }}>
+			<MenuList />
 			<Link href="/">
 				<IconTitleContainer>
 					<HomeRoundedIcon color="action" />
@@ -54,7 +56,7 @@ export default function BottomNavigation() {
 			</Link>
 			<Link href="/calendar">
 				<IconTitleContainer>
-					<CalendarTodayRoundedIcon color="action" />
+					<EventAvailableRoundedIcon color="action" />
 					<TitleContainer>
 						<a>내가찾는</a>
 					</TitleContainer>
@@ -81,12 +83,13 @@ const BottomNavigationContainer = styled.div`
 
 const IconTitleContainer = styled.div`
 	display: flex;
-	width: 72px;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	&:hover {
-		cursor: pointer;
+		background-color: var(--color-border);
 	}
 `;
 

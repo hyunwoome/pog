@@ -27,6 +27,7 @@ const Button = styled.button`
 	line-height: 37px;
 	background-color: var(--color-background);
 	border: 1px solid var(--color-border);
+	cursor: pointer;
 `;
 
 const CustomSearchButton = styled(SearchIcon)`

@@ -36,7 +36,6 @@ const TopButton = styled.button`
 	right: 20px;
 	align-items: center;
 	justify-content: center;
-	z-index: 100;
 	border-radius: 50%;
 	padding: 8px;
 	display: flex;
@@ -44,6 +43,9 @@ const TopButton = styled.button`
 	background-color: var(--color-background);
 	box-shadow: 1px 1px 3px gray;
 	cursor: pointer;
+	&:hover {
+		background-color: var(--color-border);
+	}
 `;
 
 const Fade = styled.div`

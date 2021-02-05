@@ -47,4 +47,4 @@
 | Primary-Dark   | #8bc34a |
 | Secondary      | #ff8a65 |
 | Font           | #000000 |
-| Border         | #e0e0e0 |
+| Border, Hover  | #e0e0e0 |

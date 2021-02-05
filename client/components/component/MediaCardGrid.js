@@ -8,24 +8,28 @@ export default function MediaCardGrid() {
 
 	const sampleData = [
 		{
+			id: 1,
 			country: '베트남',
 			title: '하노이-피닉스 CC',
 			price: '130,000원',
 			src: '/000000.png',
 		},
 		{
+			id: 2,
 			country: '베트남',
 			title: '하노이-피닉스 CC',
 			price: '130,000원',
 			src: '/000000.png',
 		},
 		{
+			id: 3,
 			country: '베트남',
 			title: '하노이-피닉스 CC',
 			price: '130,000원',
 			src: '/000000.png',
 		},
 		{
+			id: 4,
 			country: '베트남',
 			title: '하노이-피닉스 CC',
 			price: '130,000원',
@@ -34,7 +38,7 @@ export default function MediaCardGrid() {
 	];
 
 	const MediaCardGridList = sampleData.map((data) => (
-		<MediaPaddingContainer>
+		<MediaPaddingContainer key={data.id}>
 			<MediaCardItemContainer>
 				<MediaImageWrapper>
 					<CustomImage

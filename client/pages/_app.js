@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import Head from 'next/head';
 import ScrollTopButton from '../components/component/ScrollTopButton';
+import BottomNavigation from '../components/section/BottomNavigation';
 
 export default function MyApp({ Component, pageProps }) {
 	return (
@@ -19,6 +20,7 @@ export default function MyApp({ Component, pageProps }) {
 			<BaseContainer>
 				<Component {...pageProps} />
 				<ScrollTopButton />
+				<BottomNavigation />
 			</BaseContainer>
 		</div>
 	);
