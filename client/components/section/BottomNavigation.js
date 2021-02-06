@@ -5,7 +5,6 @@ import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import EventAvailableRoundedIcon from '@material-ui/icons/EventAvailableRounded';
 import { useState, useEffect } from 'react';
-import MenuList from '../component/MenuList';
 
 export default function BottomNavigation() {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -29,7 +28,6 @@ export default function BottomNavigation() {
 
 	return (
 		<BottomNavigationContainer style={{ bottom: visible ? '0' : '-72px' }}>
-			<MenuList />
 			<Link href="/">
 				<IconTitleContainer>
 					<HomeRoundedIcon color="action" />
@@ -38,11 +36,11 @@ export default function BottomNavigation() {
 					</TitleContainer>
 				</IconTitleContainer>
 			</Link>
-			<Link href="/">
+			<Link href="/menu">
 				<IconTitleContainer>
 					<MenuRoundedIcon color="action" />
 					<TitleContainer>
-						<a>메뉴</a>
+						<a>전체메뉴</a>
 					</TitleContainer>
 				</IconTitleContainer>
 			</Link>
