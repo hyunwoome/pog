@@ -40,9 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
 	--color-background: #ffffff;
 	--color-subBackground: #f3f5f9;
-	--color-primary: #9ccc65;
-	--color-primary-dark: #8bc34a;
-	--color-secondary: #ff8a65;
+	--color-primary: #ff577f;
 	--color-font: #000000;
 	--color-border: #e0e0e0;
 

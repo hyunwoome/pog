@@ -3,7 +3,6 @@ import Header from '../components/section/Header';
 import Tabs from '../components/component/Tabs';
 import MediaCardGrid from '../components/component/MediaCardGrid';
 import MoreButton from '../components/component/MoreButton';
-import Board from '../components/section/Board';
 
 export default function Home() {
 	return (
@@ -11,8 +10,6 @@ export default function Home() {
 			<Header />
 			<Tabs />
 			<MediaCardGrid />
-			<MoreButton />
-			<Board />
 			<MoreButton />
 		</>
 	);

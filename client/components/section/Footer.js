@@ -64,9 +64,9 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.footer`
-	margin-top: 20px;
-	width: 100%;
+	background-color: var(--color-background);
 	border-top: 1px solid var(--color-border);
+	width: 100%;
 `;
 
 const FooterInnerContainer = styled.div`

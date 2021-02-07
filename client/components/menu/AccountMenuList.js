@@ -57,8 +57,7 @@ export default function AccountMenuList() {
 
 const AccountMenuContainer = styled.div`
 	width: 100%;
-	height: 100%;
-	padding: 8px 16px 32px 16px;
+	padding: 54px 16px 32px 16px;
 	background-color: var(--color-background);
 `;
 

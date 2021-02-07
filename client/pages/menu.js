@@ -6,11 +6,15 @@ import BackButton from '../components/component/BackButton';
 
 export default function Menu() {
 	return (
-		<div>
+		<MenuContainer>
 			<BackButton />
 			<AccountMenuList />
 			<GolfItemMenuList />
 			<NoticeMenuList />
-		</div>
+		</MenuContainer>
 	);
 }
+
+const MenuContainer = styled.div`
+	height: 90vh;
+`;
