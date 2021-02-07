@@ -62,6 +62,6 @@ a {
 
 const BaseContainer = styled.div`
 	max-width: 1024px;
-	height: 1000px;
+	height: 1300px;
 	margin: auto;
 `;

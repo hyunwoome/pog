@@ -60,8 +60,6 @@ const AccountMenuContainer = styled.div`
 	height: 100%;
 	padding: 8px 16px 32px 16px;
 	background-color: var(--color-background);
-	border-bottom-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 `;
 
 const AccountMenuTitle = styled.h3`

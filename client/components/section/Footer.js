@@ -64,13 +64,13 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.footer`
-	margin-top: 100px;
+	margin-top: 20px;
 	width: 100%;
 	border-top: 1px solid var(--color-border);
 `;
 
 const FooterInnerContainer = styled.div`
-	padding: 16px;
+	padding: 16px 16px 80px 16px;
 `;
 
 const FooterMenuContainer = styled.div``;

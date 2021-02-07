@@ -80,9 +80,7 @@ const MediaCardItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 8px;
-	&:hover {
-		border: 1px solid var(--color-border);
-	}
+	cursor: pointer;
 `;
 
 const MediaImageWrapper = styled.div``;

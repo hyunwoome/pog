@@ -48,7 +48,6 @@ const NoticeMenuContainer = styled.div`
 	padding: 8px 16px 32px 16px;
 	background-color: var(--color-background);
 	margin-top: 12px;
-	border-radius: 10px;
 `;
 
 const NoticeItemMenuTitle = styled.h3`
