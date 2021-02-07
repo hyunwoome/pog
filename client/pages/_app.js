@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import ScrollTopButton from '../components/component/ScrollTopButton';
 import BottomNavigation from '../components/section/BottomNavigation';
+import Footer from '../components/section/Footer';
 
 export default function MyApp({ Component, pageProps }) {
 	return (
@@ -22,6 +23,7 @@ export default function MyApp({ Component, pageProps }) {
 				<ScrollTopButton />
 				<BottomNavigation />
 			</BaseContainer>
+			<Footer />
 		</div>
 	);
 }
@@ -60,5 +62,6 @@ a {
 
 const BaseContainer = styled.div`
 	max-width: 1024px;
+	height: 1500px;
 	margin: auto;
 `;
