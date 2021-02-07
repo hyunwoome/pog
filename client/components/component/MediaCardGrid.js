@@ -67,9 +67,11 @@ const MediaCardContainer = styled.div`
 	background-color: var(--color-background);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
 	}
+	padding: 0 16px;
+	gap: 16px;
 `;
 
 const MediaPaddingContainer = styled.div`
@@ -79,7 +81,6 @@ const MediaPaddingContainer = styled.div`
 const MediaCardItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 8px;
 	cursor: pointer;
 `;
 
