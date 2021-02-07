@@ -22,8 +22,8 @@ export default function MyApp({ Component, pageProps }) {
 				<Component {...pageProps} />
 				<ScrollTopButton />
 				<BottomNavigation />
+				<Footer />
 			</BaseContainer>
-			<Footer />
 		</div>
 	);
 }
@@ -62,6 +62,6 @@ a {
 
 const BaseContainer = styled.div`
 	max-width: 1024px;
-	height: 1500px;
+	height: 1000px;
 	margin: auto;
 `;

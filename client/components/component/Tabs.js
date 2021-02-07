@@ -75,7 +75,7 @@ const ActiveButton = styled(TabsButton)`
 `;
 
 const TabsIndicator = styled.span`
-	background-color: black;
+	background-color: #ff577f;
 	position: absolute;
 	height: 4px;
 	right: 0;
