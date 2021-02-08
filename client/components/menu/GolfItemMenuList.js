@@ -18,7 +18,7 @@ export default function GolfItemMenuList() {
 					<GolfItemMenuRow>
 						<Link href="/product:sale">
 							<GolfItemMenuCell>
-								<a style={{ color: '#ff577f' }}>초특가</a>
+								<a style={{ color: 'var(--color-primary)' }}>초특가</a>
 							</GolfItemMenuCell>
 						</Link>
 						<Link href="/product:taiwan">

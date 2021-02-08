@@ -23,7 +23,7 @@ export default function AccountMenuList() {
 						</Link>
 						<Link href="/signup">
 							<AccountMenuCell>
-								<a style={{ color: '#ff577f' }}>회원가입</a>
+								<a style={{ color: 'var(--color-primary)' }}>회원가입</a>
 							</AccountMenuCell>
 						</Link>
 					</AccountMenuRow>

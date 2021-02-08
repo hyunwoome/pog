@@ -43,8 +43,6 @@
 | -------------- | ------- |
 | Background     | #ffffff |
 | Sub Background | #f3f5f9 |
-| Primary        | #9ccc65 |
-| Primary-Dark   | #8bc34a |
-| Secondary      | #ff8a65 |
+| Primary        | #ff577f |
 | Font           | #000000 |
 | Border, Hover  | #e0e0e0 |

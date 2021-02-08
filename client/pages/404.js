@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
 import ErrorOutlineRoundedIcon from '@material-ui/icons/ErrorOutlineRounded';
+import { useRouter } from 'next/router';
 
 export default function Custom404() {
+	const router = useRouter();
+
+	const handleClick = () => {
+		router.push('/');
+	};
+
 	return (
 		<div>
 			<Custom404Container>
@@ -17,7 +24,7 @@ export default function Custom404() {
 						<br />
 						요청하신 페이지를 찾을 수 없습니다.
 					</Custom404Text>
-					<Button>홈으로 이동하기</Button>
+					<Button onClick={handleClick}>홈으로 이동하기</Button>
 				</Custom404Wrapper>
 			</Custom404Container>
 		</div>
