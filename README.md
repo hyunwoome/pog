@@ -1,12 +1,12 @@
-# POG - Material
+# Pride Of Golf
 
 ## Frontend
 
-- Next.js
+- `Next.js`
 
-- styled-components
+- `styled-components`
 
-- Material UI Icons
+- `Material UI Icons`
 
 ### Layout
 
