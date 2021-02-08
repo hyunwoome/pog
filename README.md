@@ -3,9 +3,7 @@
 ## Frontend
 
 - `Next.js`
-
 - `styled-components`
-
 - `Material UI Icons`
 
 ### Layout
@@ -49,4 +47,4 @@
 
 ## Backend
 
-- Express.js
+- `express.js`
