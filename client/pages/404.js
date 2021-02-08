@@ -62,4 +62,5 @@ const Button = styled.button`
 	color: var(--color-background);
 	font-size: 1rem;
 	margin-top: 32px;
+	cursor: pointer;
 `;
