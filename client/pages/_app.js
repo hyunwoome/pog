@@ -43,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
 	--color-primary: #ff577f;
 	--color-font: #000000;
 	--color-border: #e0e0e0;
+	--color-placeholder: #bebebe;
 
 	/* Font Variable */
 

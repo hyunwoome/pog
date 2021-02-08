@@ -2,6 +2,12 @@
 
 ## Frontend
 
+- Next.js
+
+- styled-components
+
+- Material UI Icons
+
 ### Layout
 
 - Breakpoint
@@ -31,11 +37,11 @@
 
 - Reference
 
-![Typography](./Typography.png)
+![Typography](./images/Typography.png)
 
 - Noto Sans KR
 
-![NotoSansKR](./NotoSansKR.png)
+![NotoSansKR](./images/NotoSansKR.png)
 
 ### Color
 
@@ -46,3 +52,10 @@
 | Primary        | #ff577f |
 | Font           | #000000 |
 | Border, Hover  | #e0e0e0 |
+| Placeholder    | #bebebe |
+
+<br>
+
+## Backend
+
+- Express.js
