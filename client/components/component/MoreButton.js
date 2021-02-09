@@ -6,8 +6,10 @@ export default function MoreButton() {
 	return (
 		<Link href="/">
 			<MoreButtonContainer>
-				<MoreButtonAnchor>더보기</MoreButtonAnchor>
-				<ArrowForwardIcon fontSize="small" />
+				<MoreButtonWrapper>
+					<MoreButtonAnchor>해당 상품 더보기</MoreButtonAnchor>
+					<ArrowForwardIcon fontSize="small" />
+				</MoreButtonWrapper>
 			</MoreButtonContainer>
 		</Link>
 	);
@@ -15,11 +17,18 @@ export default function MoreButton() {
 
 const MoreButtonContainer = styled.div`
 	width: 100%;
-	height: 50px;
+	padding: 16px;
 	background-color: var(--color-background);
+`;
+
+const MoreButtonWrapper = styled.div`
+	border: 1px solid var(--color-border);
+	height: 50px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 3px;
 	cursor: pointer;
 `;
 

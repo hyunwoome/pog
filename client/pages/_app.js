@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
 	return (
 		<div>
 			<Head>
-				<title>Pride of Golf</title>
+				<title>Pride Of Golf</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link

@@ -48,3 +48,7 @@
 ## Backend
 
 - `express.js`
+
+### Database
+
+- `MongoDB Atlas`
