@@ -1,10 +1,14 @@
 import styled from 'styled-components';
+import BackButton from '../components/component/BackButton';
 
 export default function Notice() {
 	return (
-		<NoticeContainer>
-			<NoticeTitleWrapper>공지사항</NoticeTitleWrapper>
-		</NoticeContainer>
+		<div>
+			<BackButton />
+			<NoticeContainer>
+				<NoticeTitleWrapper>공지사항</NoticeTitleWrapper>
+			</NoticeContainer>
+		</div>
 	);
 }
 
@@ -19,4 +23,10 @@ const NoticeContainer = styled.div`
 const NoticeTitleWrapper = styled.h3`
 	font-weight: 400;
 	margin: 0;
+`;
+
+const ButtonWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 `;
