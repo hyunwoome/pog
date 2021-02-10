@@ -16,6 +16,11 @@ export default function MyApp({ Component, pageProps }) {
 					href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 					rel="stylesheet"
 				/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<GlobalStyle />
 			<BaseContainer>
@@ -41,7 +46,8 @@ const GlobalStyle = createGlobalStyle`
 	--color-background: #ffffff;
 	--color-subBackground: #f3f5f9;
 	--color-primary: #ff577f;
-	--color-font: #000000;
+	--color-key: #fbd757;
+	--color-font: #292927;
 	--color-border: #e0e0e0;
 	--color-placeholder: #bebebe;
 

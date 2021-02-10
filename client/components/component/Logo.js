@@ -11,6 +11,6 @@ export default function Logo() {
 	);
 }
 
-const LogoText = styled.h3`
-	font-weight: 400;
+const LogoText = styled.h2`
+	font-family: 'Racing Sans One', cursive;
 `;
