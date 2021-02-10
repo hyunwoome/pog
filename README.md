@@ -47,7 +47,7 @@
 
 ## Backend
 
-- `express.js`
+- `Next.js api Server`
 
 ### Database
 
