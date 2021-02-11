@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Link from 'next/link';
 
 export async function getStaticProps() {
-	const res = await fetch('http://localhost:3000/api/notice/');
+	const res = await fetch('http://localhost:3000/api/notices');
 	const noticeItem = await res.json();
 
 	return {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Notice({ noticeItem }) {
+export default function Notices({ noticeItem }) {
 	const noticeBoard = noticeItem.map((data) => (
 		<Link href={`/notice/${data.id}`} key={data.id}>
 			<a>

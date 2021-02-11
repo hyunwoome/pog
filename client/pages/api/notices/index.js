@@ -1,4 +1,4 @@
-export default function Notices(req, res) {
+export default function Index(req, res) {
 	res.status(200).json([
 		{
 			id: 1,

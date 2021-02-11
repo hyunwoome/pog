@@ -16,7 +16,7 @@ export default function NoticeMenuList() {
 				</colgroup>
 				<NoticeMenuTableBody>
 					<NoticeMenuRow>
-						<Link href="/notice">
+						<Link href="/notices">
 							<NoticeMenuCell>
 								<a>공지사항</a>
 							</NoticeMenuCell>
