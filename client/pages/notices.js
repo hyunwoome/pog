@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Link from 'next/link';
 
 export async function getStaticProps() {
-	const res = await fetch('http://localhost:3000/api/notices');
+	const res = await fetch('http://localhost:1337/notices');
 	const noticeItem = await res.json();
 
 	return {
@@ -16,17 +16,17 @@ export async function getStaticProps() {
 
 export default function Notices({ noticeItem }) {
 	const noticeBoard = noticeItem.map((data) => (
-		<Link href={`/notice/${data.id}`} key={data.id}>
+		<Link href={`/notices/${data.id}`} key={data.id}>
 			<a>
-				<NoticeCardWrapper>
+				<NoticesCardWrapper>
 					<ContentWrapper>
-						<NoticeTitle>{data.title}</NoticeTitle>
-						<NoticeDate>{data.date}</NoticeDate>
+						<NoticesTitle>{data.title}</NoticesTitle>
+						<NoticesDate>{data.date}</NoticesDate>
 					</ContentWrapper>
 					<IconWrapper>
 						<ArrowForwardIosIcon fontSize="small" color="action" />
 					</IconWrapper>
-				</NoticeCardWrapper>
+				</NoticesCardWrapper>
 			</a>
 		</Link>
 	));
@@ -34,15 +34,15 @@ export default function Notices({ noticeItem }) {
 	return (
 		<div>
 			<BackButton />
-			<NoticeContainer>
-				<NoticeTitleWrapper>공지사항</NoticeTitleWrapper>
-				<NoticeWrapper>{noticeBoard}</NoticeWrapper>
-			</NoticeContainer>
+			<NoticesContainer>
+				<NoticesTitleWrapper>공지사항</NoticesTitleWrapper>
+				<NoticesWrapper>{noticeBoard}</NoticesWrapper>
+			</NoticesContainer>
 		</div>
 	);
 }
 
-const NoticeContainer = styled.div`
+const NoticesContainer = styled.div`
 	width: 100%;
 	height: 90vh;
 	background-color: var(--color-background);
@@ -50,15 +50,15 @@ const NoticeContainer = styled.div`
 	text-align: center;
 `;
 
-const NoticeTitleWrapper = styled.h3`
+const NoticesTitleWrapper = styled.h3`
 	font-weight: 400;
 	margin: 0;
 	margin-bottom: 16px;
 `;
 
-const NoticeWrapper = styled.div``;
+const NoticesWrapper = styled.div``;
 
-const NoticeCardWrapper = styled.div`
+const NoticesCardWrapper = styled.div`
 	border-bottom: 1px solid var(--color-border);
 	text-align: left;
 	padding: 16px 8px;
@@ -72,12 +72,12 @@ const ContentWrapper = styled.div`
 	padding-right: 8px;
 `;
 
-const NoticeTitle = styled.h4`
+const NoticesTitle = styled.h4`
 	margin: 0;
 	font-weight: 400;
 `;
 
-const NoticeDate = styled.div`
+const NoticesDate = styled.div`
 	font-size: 0.75rem;
 	margin-top: 4px;
 	color: #919191;

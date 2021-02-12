@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "samples",
+  "collectionName": "notices",
   "info": {
-    "name": "sample"
+    "name": "Notice",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,8 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "sample": {
+    "title": {
       "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

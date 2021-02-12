@@ -16,9 +16,8 @@ export default function BackButton() {
 const BackButtonContainer = styled.div`
 	background-color: var(--color-background);
 	padding: 14px 0 0 16px;
+	width: 1024px;
 	position: fixed;
-	width: 100%;
-	display: flex;
 `;
 
 const BackButtonWrapper = styled.button`

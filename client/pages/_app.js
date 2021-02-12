@@ -40,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
 	background-color: var(--color-subBackground);
 	font-family: 'Noto Sans KR', sans-serif;
+	
 
 	/* Color Variable */
 
