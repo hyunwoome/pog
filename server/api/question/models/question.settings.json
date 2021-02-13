@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "name": "Question",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "author": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "check": {
+      "type": "boolean"
+    }
+  }
+}
