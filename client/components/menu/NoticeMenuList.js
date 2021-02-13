@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function NoticeMenuList() {
 	return (
 		<NoticeMenuContainer>
-			<NoticeItemMenuTitle>기타 문의</NoticeItemMenuTitle>
+			<NoticeItemMenuTitle>고객 센터</NoticeItemMenuTitle>
 			<NoticeMenuTable>
 				<colgroup>
 					<col

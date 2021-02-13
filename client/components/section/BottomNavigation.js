@@ -66,7 +66,7 @@ export default function BottomNavigation() {
 
 const BottomNavigationContainer = styled.div`
 	max-width: 1024px;
-	height: 72px;
+	height: 56px;
 	position: fixed;
 	bottom: 0;
 	left: 0;

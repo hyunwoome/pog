@@ -30,10 +30,10 @@ export default function Notices({ notice }) {
 				<NoticeTitleDateWrapper>
 					<NoticeTitle>{notice.title}</NoticeTitle>
 					<NoticeDate>{notice.date}</NoticeDate>
-					<NoticeContentWrapper>
-						<p>{notice.content}</p>
-					</NoticeContentWrapper>
 				</NoticeTitleDateWrapper>
+				<NoticeContentWrapper>
+					<p>{notice.content}</p>
+				</NoticeContentWrapper>
 			</NoticeContainer>
 		</div>
 	);
@@ -45,7 +45,10 @@ const NoticeContainer = styled.div`
 	padding: 54px 16px 32px 16px;
 `;
 
-const NoticeTitleDateWrapper = styled.div``;
+const NoticeTitleDateWrapper = styled.div`
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 20px;
+`;
 
 const NoticeTitle = styled.h3`
 	font-weight: 400;
@@ -59,5 +62,6 @@ const NoticeDate = styled.div`
 `;
 
 const NoticeContentWrapper = styled.div`
-	margin-top: 32px;
+	margin-top: 16px;
+	font-size: 0.875rem;
 `;

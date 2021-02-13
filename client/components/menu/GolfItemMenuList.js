@@ -57,7 +57,7 @@ export default function GolfItemMenuList() {
 					<GolfItemMenuRow>
 						<Link href="/product:guam">
 							<GolfItemMenuCell>
-								<a>괌&사이판</a>
+								<a>괌, 사이판</a>
 							</GolfItemMenuCell>
 						</Link>
 						<Link href="/product:asia">

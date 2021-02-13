@@ -21,4 +21,5 @@ const HeaderContainer = styled.header`
 	align-items: center;
 	padding: 0 16px;
 	background-color: var(--color-background);
+	border-bottom: 1px solid var(--color-border);
 `;

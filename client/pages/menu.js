@@ -16,5 +16,5 @@ export default function Menu() {
 }
 
 const MenuContainer = styled.div`
-	height: 90vh;
+	height: 100%;
 `;
