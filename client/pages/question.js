@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
 import Link from 'next/link';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
+import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:1337/questions');
@@ -43,17 +44,15 @@ export default function Question({ data }) {
 
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="견적문의"
+				icon={CreateRoundedIcon}
+				color="#2296f2"
+				// ! create 함수 작성하기
+				// buttonHandle={homeButton}
+			/>
 			<QuestionContainer>
-				<QuestionTitleWrapper>견적문의</QuestionTitleWrapper>
 				<QuestionContentWrapper>{QuestionItem}</QuestionContentWrapper>
-				<ButtonWrapper>
-					<Link href="/question/create">
-						<Button>
-							<a>작성하기</a>
-						</Button>
-					</Link>
-				</ButtonWrapper>
 			</QuestionContainer>
 		</div>
 	);

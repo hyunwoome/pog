@@ -12,8 +12,8 @@ export default function Custom404() {
 
 	return (
 		<div>
+			<BackButton />
 			<Custom404Container>
-				<BackButton />
 				<Custom404Wrapper>
 					<ErrorOutlineRoundedIcon color="error" fontSize="large" />
 					<Custom404Title>페이지를 찾을 수 없습니다.</Custom404Title>

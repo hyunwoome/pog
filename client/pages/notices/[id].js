@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import BackButton from '../../components/component/BackButton';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps({ params: { id } }) {
 	const res = await fetch(`http://localhost:1337/notices/?id=${id}`);
@@ -23,9 +25,17 @@ export async function getStaticPaths() {
 }
 
 export default function Notices({ notice }) {
+	const homeButton = () => {
+		router.push('/');
+	};
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="공지사항"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<NoticeContainer>
 				<NoticeTitleDateWrapper>
 					<NoticeTitle>{notice.title}</NoticeTitle>

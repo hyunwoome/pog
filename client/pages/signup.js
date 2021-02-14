@@ -2,13 +2,24 @@ import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
 import BaseInput from '../components/component/BaseInput';
 import Link from 'next/link';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useRouter } from 'next/router';
 
 export default function Signup() {
+	const router = useRouter();
+	const homeButton = () => {
+		router.push('/');
+	};
+
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="회원가입"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<SignupContainer>
-				<SignupTitleWrapper>회원가입</SignupTitleWrapper>
 				<SignupInputWrapper>
 					<BaseInput type="text" placeholder="이름" />
 					<BaseInput type="tel" placeholder="아이디 (핸드폰번호)" />

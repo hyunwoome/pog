@@ -15,12 +15,21 @@ export default function BackButton({ title, icon, color, buttonHandle }) {
 							<ArrowBackIcon />
 						</BackIconButton>
 					</BackButtonWrapper>
-					<BackButtonTitleWrapper>{title}</BackButtonTitleWrapper>
-					<BackButtonMenuWrapper>
-						<BackButtonMenuButton onClick={menuButtonHandle}>
-							<ICON style={{ color: color }} />
-						</BackButtonMenuButton>
-					</BackButtonMenuWrapper>
+
+					{title ? (
+						<BackButtonTitleWrapper>{title}</BackButtonTitleWrapper>
+					) : (
+						<BackButtonTitleWrapper></BackButtonTitleWrapper>
+					)}
+					{ICON ? (
+						<BackButtonMenuWrapper>
+							<BackButtonMenuButton onClick={menuButtonHandle}>
+								<ICON style={{ color: color }} />
+							</BackButtonMenuButton>
+						</BackButtonMenuWrapper>
+					) : (
+						<BackButtonMenuWrapper></BackButtonMenuWrapper>
+					)}
 				</BackButtonNavContainer>
 			</BackButtonContainer>
 		</BackButtonFixedContainer>

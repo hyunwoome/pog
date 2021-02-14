@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Link from 'next/link';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps() {
 	const res = await fetch('http://localhost:1337/notices');
@@ -15,6 +17,10 @@ export async function getStaticProps() {
 }
 
 export default function Notices({ noticeItem }) {
+	const router = useRouter();
+	const homeButton = () => {
+		router.push('/');
+	};
 	const noticeBoard = noticeItem.map((data) => (
 		<Link href={`/notices/${data.id}`} key={data.id}>
 			<a>
@@ -33,9 +39,13 @@ export default function Notices({ noticeItem }) {
 
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="공지사항"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<NoticesContainer>
-				<NoticesTitleWrapper>공지사항</NoticesTitleWrapper>
 				<NoticesWrapper>{noticeBoard}</NoticesWrapper>
 			</NoticesContainer>
 		</div>

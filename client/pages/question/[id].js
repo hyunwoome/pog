@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import BackButton from '../../components/component/BackButton';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps({ params: { id } }) {
 	const res = await fetch(`http://localhost:1337/questions/?id=${id}`);
@@ -24,9 +26,17 @@ export async function getStaticPaths() {
 }
 
 export default function QuestionDetail({ question }) {
+	const homeButton = () => {
+		router.push('/');
+	};
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="견적문의"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<QuestionDetailContainer>
 				<QuestionDetailMetaWrapper>
 					<QuestionDetailWrapper>
