@@ -3,17 +3,28 @@ import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
 import BaseInput from '../components/component/BaseInput';
 import Link from 'next/link';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 
 export default function Login() {
 	const router = useRouter();
+
 	const pushSignup = () => {
 		router.push('/signup');
 	};
+
+	const homeButton = () => {
+		router.push('/');
+	};
+
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="로그인"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<LoginContainer>
-				<LoginTitleWrapper>로그인</LoginTitleWrapper>
 				<LoginInputWrapper>
 					<BaseInput type="tel" placeholder="아이디 (휴대폰번호)" />
 					<BaseInput type="password" placeholder="비밀번호" />

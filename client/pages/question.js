@@ -1,6 +1,7 @@
-import { StepLabel } from '@material-ui/core';
 import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
+import Link from 'next/link';
+import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:1337/questions');
@@ -12,16 +13,32 @@ export async function getServerSideProps() {
 
 export default function Question({ data }) {
 	const QuestionItem = data.map((item) => (
-		<QuestionItemWrapper key={item.id}>
-			<QuestionNumber>
-				{item.number}
-				<QuestionDate>{item.date}</QuestionDate>
-			</QuestionNumber>
-			<QuestionTitle>{item.title}</QuestionTitle>
-			<QuestionAuthor>{item.author}</QuestionAuthor>
-
-			<QuestionCheck>{item.check}</QuestionCheck>
-		</QuestionItemWrapper>
+		<Link href={`/question/${item.id}`} key={item.id}>
+			<a>
+				<QuestionItemWrapper>
+					<QuestionNumber>{item.number}</QuestionNumber>
+					<QuestionMetaWrapper>
+						<QuestionTitle>{item.title}</QuestionTitle>
+						<QuestionDateAuthorWrapper>
+							<QuestionAuthor>{item.author}</QuestionAuthor>
+							<QuestionDate>{item.date}</QuestionDate>
+						</QuestionDateAuthorWrapper>
+					</QuestionMetaWrapper>
+					<QuestionIcons>
+						{item.check ? (
+							<CheckCircleOutlineRoundedIcon
+								style={{ fontSize: 30, color: '#ff577f' }}
+							/>
+						) : (
+							<CheckCircleOutlineRoundedIcon
+								style={{ fontSize: 30 }}
+								color="disabled"
+							/>
+						)}
+					</QuestionIcons>
+				</QuestionItemWrapper>
+			</a>
+		</Link>
 	));
 
 	return (
@@ -30,7 +47,13 @@ export default function Question({ data }) {
 			<QuestionContainer>
 				<QuestionTitleWrapper>견적문의</QuestionTitleWrapper>
 				<QuestionContentWrapper>{QuestionItem}</QuestionContentWrapper>
-				<Button>글작성</Button>
+				<ButtonWrapper>
+					<Link href="/question/create">
+						<Button>
+							<a>작성하기</a>
+						</Button>
+					</Link>
+				</ButtonWrapper>
 			</QuestionContainer>
 		</div>
 	);
@@ -40,12 +63,13 @@ const QuestionContainer = styled.div`
 	width: 100%;
 	height: 90vh;
 	background-color: var(--color-background);
-	padding: 54px 16px 32px 16px;
+	padding: 54px 0px 32px 0px;
 	text-align: center;
 `;
 
 const QuestionTitleWrapper = styled.h3`
 	font-weight: 400;
+	width: 100%;
 	margin: 0;
 	margin-bottom: 16px;
 `;
@@ -56,23 +80,47 @@ const QuestionContentWrapper = styled.div`
 `;
 
 const QuestionItemWrapper = styled.div`
-	border: 1px solid var(--color-border);
-	padding: 16px;
+	border-bottom: 1px solid var(--color-border);
+	padding: 16px 24px 16px 8px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem;
 `;
 
 const QuestionNumber = styled.div`
-	font-size: 0.75rem;
-	display: flex;
-	justify-content: space-between;
+	width: 36px;
 `;
 
-const QuestionDate = styled.div``;
+const QuestionTitle = styled.div`
+	margin-bottom: 4px;
+	font-size: 1rem;
+	text-align: left;
+`;
 
-const QuestionTitle = styled.div``;
+const QuestionMetaWrapper = styled.div`
+	margin-left: 8px;
+`;
+
+const QuestionDateAuthorWrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
+	color: #9ca4ab;
+	width: 150px;
+`;
 
 const QuestionAuthor = styled.div``;
 
-const QuestionCheck = styled.div``;
+const QuestionDate = styled.div``;
+
+const QuestionIcons = styled.div`
+	flex: 2;
+	text-align: right;
+`;
+
+const ButtonWrapper = styled.div`
+	padding: 0 16px 0 16px;
+`;
 
 const Button = styled.button`
 	display: block;
