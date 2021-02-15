@@ -53,6 +53,7 @@ const NoticeContainer = styled.div`
 	width: 100%;
 	background-color: var(--color-background);
 	padding: 54px 16px 32px 16px;
+	min-height: 90vh;
 `;
 
 const NoticeTitleDateWrapper = styled.div`

@@ -1,16 +1,36 @@
 import styled from 'styled-components';
 import BackButton from '../../components/component/BackButton';
 import BaseInput from '../../components/component/BaseInput';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useRouter } from 'next/router';
+import LabelInput from '../../components/component/LabelInput';
 
 export default function QuestionCreate() {
+	const router = useRouter();
+	const homeButton = () => {
+		router.push('/');
+	};
 	return (
 		<div>
-			<BackButton />
+			<BackButton
+				title="견적문의하기"
+				icon={HomeRoundedIcon}
+				color="#ff577f"
+				buttonHandle={homeButton}
+			/>
 			<QuestionCreateContainer>
-				<QuestionCreateTitleWrapper>견적문의하기</QuestionCreateTitleWrapper>
 				<QuestionCreateContentWrapper>
-					<BaseInput type="text" placeholder="제목" />
-					<QuestionCreateTextArea placeholder="내용" />
+					<TitleContainer>
+						<LabelInput
+							for="title"
+							label="제목"
+							type="text"
+							id="title"
+							placeholder="제목은 자동으로 생성됩니다."
+							disabled={true}
+						/>
+					</TitleContainer>
+					<DropdownContainer></DropdownContainer>
 				</QuestionCreateContentWrapper>
 			</QuestionCreateContainer>
 		</div>
@@ -25,25 +45,10 @@ const QuestionCreateContainer = styled.div`
 	text-align: center;
 `;
 
-const QuestionCreateTitleWrapper = styled.h3`
-	font-weight: 400;
-	width: 100%;
-	margin: 0;
-	margin-bottom: 16px;
-`;
-
 const QuestionCreateContentWrapper = styled.div`
 	padding: 8px 16px;
 `;
 
-const QuestionCreateTextArea = styled.textarea`
-	width: 100%;
-	border: 1px solid var(--color-border);
-	padding: 16px;
-	font-size: 1.2rem;
-	border-radius: 3px;
-	margin-bottom: 16px;
-	&::placeholder {
-		color: var(--color-placeholder);
-	}
-`;
+const TitleContainer = styled.div``;
+
+const DropdownContainer = styled.div``;

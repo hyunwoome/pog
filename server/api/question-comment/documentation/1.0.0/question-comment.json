@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/questions": {
+    "/question-comments": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Question"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Question"
+          "Question-comment"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Question"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Question"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewQuestion"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/questions/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Question"
+          "Question-comment"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewQuestion-comment"
+              }
+            }
+          }
+        }
       }
     },
-    "/questions/{id}": {
+    "/question-comments/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Question"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Question"
+          "Question-comment"
+        ],
+        "parameters": []
+      }
+    },
+    "/question-comments/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Question-comment"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Question"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Question"
+          "Question-comment"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewQuestion"
+                "$ref": "#/components/schemas/NewQuestion-comment"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Question"
+          "Question-comment"
         ],
         "parameters": [
           {
@@ -514,79 +527,78 @@
   },
   "components": {
     "schemas": {
-      "Question": {
+      "Question-comment": {
         "required": [
           "id",
-          "number",
-          "title",
-          "date",
-          "author",
-          "Country",
-          "Club",
-          "PeopleNumber"
+          "Author",
+          "Content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "number": {
-            "type": "integer"
-          },
-          "title": {
+          "Author": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "author": {
+          "Content": {
             "type": "string"
           },
-          "content": {
-            "type": "string"
-          },
-          "check": {
-            "type": "boolean"
-          },
-          "Country": {
-            "type": "string"
-          },
-          "Club": {
-            "type": "string"
-          },
-          "PeopleNumber": {
-            "type": "integer"
-          },
-          "questionField": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "Author",
-                "Content"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Author": {
-                  "type": "string"
-                },
-                "Content": {
-                  "type": "string"
-                },
-                "commentField": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "commentField": {
+            "required": [
+              "id",
+              "number",
+              "title",
+              "date",
+              "author",
+              "Country",
+              "Club",
+              "PeopleNumber"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "author": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "check": {
+                "type": "boolean"
+              },
+              "Country": {
+                "type": "string"
+              },
+              "Club": {
+                "type": "string"
+              },
+              "PeopleNumber": {
+                "type": "integer"
+              },
+              "questionField": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -596,50 +608,20 @@
           }
         }
       },
-      "NewQuestion": {
+      "NewQuestion-comment": {
         "required": [
-          "number",
-          "title",
-          "date",
-          "author",
-          "Country",
-          "Club",
-          "PeopleNumber"
+          "Author",
+          "Content"
         ],
         "properties": {
-          "number": {
-            "type": "integer"
-          },
-          "title": {
+          "Author": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "author": {
+          "Content": {
             "type": "string"
           },
-          "content": {
+          "commentField": {
             "type": "string"
-          },
-          "check": {
-            "type": "boolean"
-          },
-          "Country": {
-            "type": "string"
-          },
-          "Club": {
-            "type": "string"
-          },
-          "PeopleNumber": {
-            "type": "integer"
-          },
-          "questionField": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -655,9 +637,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Question"
-    }
-  ]
+  "tags": []
 }

@@ -3,6 +3,7 @@ import BackButton from '../components/component/BackButton';
 import Link from 'next/link';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
+import { useRouter } from 'next/router';
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:1337/questions');
@@ -13,6 +14,11 @@ export async function getServerSideProps() {
 }
 
 export default function Question({ data }) {
+	const router = useRouter();
+	const pushCreate = () => {
+		router.push('/question/create');
+	};
+
 	const QuestionItem = data.map((item) => (
 		<Link href={`/question/${item.id}`} key={item.id}>
 			<a>
@@ -48,8 +54,7 @@ export default function Question({ data }) {
 				title="견적문의"
 				icon={CreateRoundedIcon}
 				color="#2296f2"
-				// ! create 함수 작성하기
-				// buttonHandle={homeButton}
+				buttonHandle={pushCreate}
 			/>
 			<QuestionContainer>
 				<QuestionContentWrapper>{QuestionItem}</QuestionContentWrapper>
