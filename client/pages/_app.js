@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import Head from 'next/head';
 import ScrollTopButton from '../components/component/ScrollTopButton';
 import BottomNavigation from '../components/section/BottomNavigation';
 import Footer from '../components/section/Footer';
+import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {
 	return (

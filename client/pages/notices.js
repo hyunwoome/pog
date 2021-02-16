@@ -21,21 +21,24 @@ export default function Notices({ noticeItem }) {
 	const homeButton = () => {
 		router.push('/');
 	};
-	const noticeBoard = noticeItem.map((data) => (
-		<Link href={`/notices/${data.id}`} key={data.id}>
-			<a>
-				<NoticesCardWrapper>
-					<ContentWrapper>
-						<NoticesTitle>{data.title}</NoticesTitle>
-						<NoticesDate>{data.date}</NoticesDate>
-					</ContentWrapper>
-					<IconWrapper>
-						<ArrowForwardIosIcon fontSize="small" color="action" />
-					</IconWrapper>
-				</NoticesCardWrapper>
-			</a>
-		</Link>
-	));
+	const noticeBoard = noticeItem
+		.slice(0)
+		.reverse()
+		.map((data) => (
+			<Link href={`/notices/${data.id}`} key={data.id}>
+				<a>
+					<NoticesCardWrapper>
+						<ContentWrapper>
+							<NoticesTitle>{data.title}</NoticesTitle>
+							<NoticesDate>{data.date}</NoticesDate>
+						</ContentWrapper>
+						<IconWrapper>
+							<ArrowForwardIosIcon fontSize="small" color="action" />
+						</IconWrapper>
+					</NoticesCardWrapper>
+				</a>
+			</Link>
+		));
 
 	return (
 		<div>

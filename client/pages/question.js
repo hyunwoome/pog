@@ -19,34 +19,37 @@ export default function Question({ data }) {
 		router.push('/question/create');
 	};
 
-	const QuestionItem = data.map((item) => (
-		<Link href={`/question/${item.id}`} key={item.id}>
-			<a>
-				<QuestionItemWrapper>
-					<QuestionNumber>{item.number}</QuestionNumber>
-					<QuestionMetaWrapper>
-						<QuestionTitle>{item.title}</QuestionTitle>
-						<QuestionDateAuthorWrapper>
-							<QuestionAuthor>{item.author}</QuestionAuthor>
-							<QuestionDate>{item.date}</QuestionDate>
-						</QuestionDateAuthorWrapper>
-					</QuestionMetaWrapper>
-					<QuestionIcons>
-						{item.check ? (
-							<CheckCircleOutlineRoundedIcon
-								style={{ fontSize: 30, color: '#ff577f' }}
-							/>
-						) : (
-							<CheckCircleOutlineRoundedIcon
-								style={{ fontSize: 30 }}
-								color="disabled"
-							/>
-						)}
-					</QuestionIcons>
-				</QuestionItemWrapper>
-			</a>
-		</Link>
-	));
+	const QuestionItem = data
+		.slice(0)
+		.reverse()
+		.map((item) => (
+			<Link href={`/question/${item.id}`} key={item.id}>
+				<a>
+					<QuestionItemWrapper>
+						<QuestionNumber>{item.number}</QuestionNumber>
+						<QuestionMetaWrapper>
+							<QuestionTitle>{item.title}</QuestionTitle>
+							<QuestionDateAuthorWrapper>
+								<QuestionAuthor>{item.author}</QuestionAuthor>
+								<QuestionDate>{item.date}</QuestionDate>
+							</QuestionDateAuthorWrapper>
+						</QuestionMetaWrapper>
+						<QuestionIcons>
+							{item.check ? (
+								<CheckCircleOutlineRoundedIcon
+									style={{ fontSize: 30, color: '#ff577f' }}
+								/>
+							) : (
+								<CheckCircleOutlineRoundedIcon
+									style={{ fontSize: 30 }}
+									color="disabled"
+								/>
+							)}
+						</QuestionIcons>
+					</QuestionItemWrapper>
+				</a>
+			</Link>
+		));
 
 	return (
 		<div>
@@ -69,13 +72,6 @@ const QuestionContainer = styled.div`
 	background-color: var(--color-background);
 	padding: 54px 0px 32px 0px;
 	text-align: center;
-`;
-
-const QuestionTitleWrapper = styled.h3`
-	font-weight: 400;
-	width: 100%;
-	margin: 0;
-	margin-bottom: 16px;
 `;
 
 const QuestionContentWrapper = styled.div`

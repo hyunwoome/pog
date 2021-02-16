@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export default function BaseInput({ type, placeholder, required }) {
+export default function BaseInput({ type, placeholder, required, id }) {
 	return (
 		<BaseInputComponent
 			type={type}
 			placeholder={placeholder}
 			required={required}
+			id={id}
 		/>
 	);
 }
