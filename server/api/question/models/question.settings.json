@@ -12,10 +12,6 @@
     "increment": true
   },
   "attributes": {
-    "number": {
-      "type": "integer",
-      "required": true
-    },
     "title": {
       "type": "string",
       "required": true
@@ -24,31 +20,18 @@
       "type": "date",
       "required": true
     },
-    "author": {
-      "type": "string",
-      "required": true
-    },
     "content": {
       "type": "richtext"
     },
     "check": {
       "type": "boolean"
     },
-    "Country": {
-      "type": "string",
-      "required": true
-    },
-    "Club": {
-      "type": "string",
-      "required": true
-    },
-    "PeopleNumber": {
-      "type": "integer",
-      "required": true
-    },
     "questionField": {
       "collection": "question-comment",
       "via": "commentField"
+    },
+    "author": {
+      "type": "string"
     }
   }
 }

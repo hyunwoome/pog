@@ -52,11 +52,6 @@ const LoginContainer = styled.div`
 	text-align: center;
 `;
 
-const LoginTitleWrapper = styled.h3`
-	font-weight: 400;
-	margin: 0;
-`;
-
 const LoginInputWrapper = styled.div`
 	margin-top: 16px;
 `;

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export default function BaseInput({ type, placeholder }) {
-	return <BaseInputComponent type={type} placeholder={placeholder} />;
+export default function BaseInput({ type, placeholder, required }) {
+	return (
+		<BaseInputComponent
+			type={type}
+			placeholder={placeholder}
+			required={required}
+		/>
+	);
 }
 
 const BaseInputComponent = styled.input`

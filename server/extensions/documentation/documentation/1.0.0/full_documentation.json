@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/15/2021 5:26:31 PM"
+    "x-generation-date": "02/15/2021 10:32:28 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3759,28 +3759,17 @@
           "commentField": {
             "required": [
               "id",
-              "number",
               "title",
-              "date",
-              "author",
-              "Country",
-              "Club",
-              "PeopleNumber"
+              "date"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "number": {
-                "type": "integer"
-              },
               "title": {
                 "type": "string"
               },
               "date": {
-                "type": "string"
-              },
-              "author": {
                 "type": "string"
               },
               "content": {
@@ -3789,20 +3778,14 @@
               "check": {
                 "type": "boolean"
               },
-              "Country": {
-                "type": "string"
-              },
-              "Club": {
-                "type": "string"
-              },
-              "PeopleNumber": {
-                "type": "integer"
-              },
               "questionField": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "author": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -3851,20 +3834,12 @@
       "Question": {
         "required": [
           "id",
-          "number",
           "title",
-          "date",
-          "author",
-          "Country",
-          "Club",
-          "PeopleNumber"
+          "date"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "number": {
-            "type": "integer"
           },
           "title": {
             "type": "string"
@@ -3873,23 +3848,11 @@
             "type": "string",
             "format": "date"
           },
-          "author": {
-            "type": "string"
-          },
           "content": {
             "type": "string"
           },
           "check": {
             "type": "boolean"
-          },
-          "Country": {
-            "type": "string"
-          },
-          "Club": {
-            "type": "string"
-          },
-          "PeopleNumber": {
-            "type": "integer"
           },
           "questionField": {
             "type": "array",
@@ -3924,6 +3887,9 @@
               }
             }
           },
+          "author": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3932,18 +3898,10 @@
       },
       "NewQuestion": {
         "required": [
-          "number",
           "title",
-          "date",
-          "author",
-          "Country",
-          "Club",
-          "PeopleNumber"
+          "date"
         ],
         "properties": {
-          "number": {
-            "type": "integer"
-          },
           "title": {
             "type": "string"
           },
@@ -3951,29 +3909,20 @@
             "type": "string",
             "format": "date"
           },
-          "author": {
-            "type": "string"
-          },
           "content": {
             "type": "string"
           },
           "check": {
             "type": "boolean"
           },
-          "Country": {
-            "type": "string"
-          },
-          "Club": {
-            "type": "string"
-          },
-          "PeopleNumber": {
-            "type": "integer"
-          },
           "questionField": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "author": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import BackButton from '../../components/component/BackButton';
-import BaseInput from '../../components/component/BaseInput';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
-import LabelInput from '../../components/component/LabelInput';
+import BaseInput from '../../components/component/BaseInput';
 
 export default function QuestionCreate() {
 	const router = useRouter();
 	const homeButton = () => {
 		router.push('/');
 	};
+
 	return (
 		<div>
 			<BackButton
@@ -20,17 +20,15 @@ export default function QuestionCreate() {
 			/>
 			<QuestionCreateContainer>
 				<QuestionCreateContentWrapper>
-					<TitleContainer>
-						<LabelInput
-							for="title"
-							label="제목"
+					<form>
+						<BaseInput
 							type="text"
-							id="title"
-							placeholder="제목은 자동으로 생성됩니다."
-							disabled={true}
+							placeholder="제목을 입력하세요"
+							required={true}
 						/>
-					</TitleContainer>
-					<DropdownContainer></DropdownContainer>
+						<QuestionCreateTextarea placeholder="내용을 입력하세요" required />
+						<Button>작성완료</Button>
+					</form>
 				</QuestionCreateContentWrapper>
 			</QuestionCreateContainer>
 		</div>
@@ -49,6 +47,29 @@ const QuestionCreateContentWrapper = styled.div`
 	padding: 8px 16px;
 `;
 
-const TitleContainer = styled.div``;
+const QuestionCreateTextarea = styled.textarea`
+	width: 100%;
+	border: 1px solid var(--color-border);
+	padding: 16px;
+	font-size: 1.3rem;
+	border-radius: 3px;
+	margin-bottom: 16px;
+	&::placeholder {
+		color: var(--color-placeholder);
+	}
+	resize: none;
+	height: 300px;
+`;
 
-const DropdownContainer = styled.div``;
+const Button = styled.button`
+	display: block;
+	width: 100%;
+	border: 0;
+	border-radius: 3px;
+	padding: 16px;
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	font-size: 1rem;
+	margin-bottom: 16px;
+	cursor: pointer;
+`;

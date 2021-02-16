@@ -546,28 +546,17 @@
           "commentField": {
             "required": [
               "id",
-              "number",
               "title",
-              "date",
-              "author",
-              "Country",
-              "Club",
-              "PeopleNumber"
+              "date"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "number": {
-                "type": "integer"
-              },
               "title": {
                 "type": "string"
               },
               "date": {
-                "type": "string"
-              },
-              "author": {
                 "type": "string"
               },
               "content": {
@@ -576,20 +565,14 @@
               "check": {
                 "type": "boolean"
               },
-              "Country": {
-                "type": "string"
-              },
-              "Club": {
-                "type": "string"
-              },
-              "PeopleNumber": {
-                "type": "integer"
-              },
               "questionField": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "author": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
