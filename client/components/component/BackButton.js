@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { useRouter } from 'next/router';
 
-export default function BackButton({ title, icon, color, buttonHandle }) {
+export default function BackButton({ title, icon, text, color, buttonHandle }) {
 	const ICON = icon;
 	const menuButtonHandle = buttonHandle;
 	const router = useRouter();
@@ -64,6 +64,9 @@ const BackButtonMenuButton = styled.button`
 	border: none;
 	background-color: var(--color-background);
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 `;
 
 const BackIconButton = styled.button`
@@ -80,5 +83,6 @@ const BackButtonTitleWrapper = styled.div`
 
 const BackButtonMenuWrapper = styled.div`
 	flex: 1;
-	text-align: right;
+	display: flex;
+	justify-content: flex-end;
 `;

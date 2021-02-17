@@ -40,6 +40,8 @@ export default function Notices({ noticeItem }) {
 			</Link>
 		));
 
+	console.log(noticeItem);
+
 	return (
 		<div>
 			<BackButton

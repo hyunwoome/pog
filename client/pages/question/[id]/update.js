@@ -35,6 +35,7 @@ export default function Update({ question }) {
 	};
 
 	const queryId = router.query.id;
+
 	const updateQuestion = async (event) => {
 		event.preventDefault();
 

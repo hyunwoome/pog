@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/16/2021 8:17:00 PM"
+    "x-generation-date": "02/17/2021 8:53:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3743,17 +3743,17 @@
       "Question-comment": {
         "required": [
           "id",
-          "Author",
-          "Content"
+          "author",
+          "content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Author": {
+          "author": {
             "type": "string"
           },
-          "Content": {
+          "content": {
             "type": "string"
           },
           "commentField": {
@@ -3798,6 +3798,10 @@
               }
             }
           },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3806,18 +3810,22 @@
       },
       "NewQuestion-comment": {
         "required": [
-          "Author",
-          "Content"
+          "author",
+          "content"
         ],
         "properties": {
-          "Author": {
+          "author": {
             "type": "string"
           },
-          "Content": {
+          "content": {
             "type": "string"
           },
           "commentField": {
             "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -3859,20 +3867,23 @@
             "items": {
               "required": [
                 "id",
-                "Author",
-                "Content"
+                "author",
+                "content"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "Author": {
+                "author": {
                   "type": "string"
                 },
-                "Content": {
+                "content": {
                   "type": "string"
                 },
                 "commentField": {
+                  "type": "string"
+                },
+                "date": {
                   "type": "string"
                 },
                 "published_at": {

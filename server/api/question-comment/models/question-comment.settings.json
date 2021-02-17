@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "question_comments",
   "info": {
-    "name": "QuestionComment"
+    "name": "QuestionComment",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,17 +11,20 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Author": {
+    "author": {
       "type": "string",
       "required": true
     },
-    "Content": {
+    "content": {
       "type": "richtext",
       "required": true
     },
     "commentField": {
-      "via": "questionField",
-      "model": "question"
+      "model": "question",
+      "via": "questionField"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

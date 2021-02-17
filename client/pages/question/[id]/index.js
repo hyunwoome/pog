@@ -4,12 +4,14 @@ import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutline
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
 
+// ! Fetch Question
 export async function getStaticProps({ params: { id } }) {
 	const res = await fetch(`http://localhost:1337/questions/?id=${id}`);
 	const found = await res.json();
 	return {
 		props: {
 			question: found[0],
+			questionField: found[0].questionField[0],
 		},
 	};
 }
@@ -25,15 +27,47 @@ export async function getStaticPaths() {
 	};
 }
 
-export default function QuestionDetail({ question }) {
+// ! Component
+export default function QuestionDetail({ question, questionField }) {
 	const router = useRouter();
 	const queryId = router.query.id;
 	const homeButton = () => {
 		router.push('/');
 	};
+	const pushQuestion = () => {
+		router.push('/question');
+	};
 	const updateButton = () => {
 		router.push(`/question/${queryId}/update`);
 	};
+
+	// ! DELETE
+	const deleteQuestion = async (event) => {
+		event.preventDefault();
+		const res = await fetch(`http://localhost:1337/questions/${queryId}`, {
+			method: 'DELETE',
+		});
+		pushQuestion();
+	};
+
+	const CommentItem = question.questionField
+		.slice(0)
+		.reverse()
+		.map((item) => (
+			<CommentContainer key={item.id}>
+				<CommentWrapper>
+					<CommentContentContainer>
+						<CommentTitle>답변완료</CommentTitle>
+						<CommentContentWrapper>{item.content}</CommentContentWrapper>
+					</CommentContentContainer>
+					<CommentMetaWrapper>
+						<CommentAuthor>{item.author}</CommentAuthor>
+						<CommentDate>{item.date}</CommentDate>
+					</CommentMetaWrapper>
+				</CommentWrapper>
+			</CommentContainer>
+		));
+
 	return (
 		<div>
 			<BackButton
@@ -52,7 +86,7 @@ export default function QuestionDetail({ question }) {
 						</QuestionDetailDateAuthorWrapper>
 					</QuestionDetailWrapper>
 					<QuestionIcons>
-						{question.check ? (
+						{question.questionField.length !== 0 ? (
 							<CheckCircleOutlineRoundedIcon
 								style={{ fontSize: 30, color: '#ff577f' }}
 							/>
@@ -68,9 +102,10 @@ export default function QuestionDetail({ question }) {
 					{question.content}
 				</QuestionDetailContentWrapper>
 			</QuestionDetailContainer>
+			{question.questionField.length !== 0 ? CommentItem : null}
 			<ButtonWrapper>
 				<LinedButton onClick={updateButton}>수정하기</LinedButton>
-				<Button>삭제하기</Button>
+				<Button onClick={deleteQuestion}>삭제하기</Button>
 			</ButtonWrapper>
 		</div>
 	);
@@ -80,7 +115,7 @@ const QuestionDetailContainer = styled.div`
 	width: 100%;
 	background-color: var(--color-background);
 	padding: 86px 16px 32px 16px;
-	min-height: 90vh;
+	min-height: 60vh;
 `;
 
 const QuestionDetailMetaWrapper = styled.div`
@@ -106,16 +141,15 @@ const QuestionDate = styled.div``;
 const QuestionDetailDateAuthorWrapper = styled.div`
 	font-size: 0.75rem;
 	margin-top: 4px;
-	color: #919191;
+	color: var(--color-subFont);
 	display: flex;
 	width: 120px;
 	justify-content: space-between;
 `;
 
 const QuestionDetailContentWrapper = styled.div`
-	margin-top: 16px;
-	font-size: 0.875rem;
 	margin: 16px 8px;
+	white-space: pre-wrap;
 `;
 
 const QuestionIcons = styled.div`
@@ -155,3 +189,45 @@ const LinedButton = styled.button`
 	cursor: pointer;
 	margin-right: 16px;
 `;
+
+const CommentContainer = styled.div`
+	background-color: var(--color-background);
+	padding: 8px 16px;
+`;
+
+const CommentTitle = styled.div`
+	font-size: 0.875rem;
+	color: var(--color-primary);
+`;
+
+const CommentWrapper = styled.div`
+	border: 1px solid var(--color-border);
+	min-height: 150px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 1px var(--color-border);
+	padding: 8px;
+`;
+
+const CommentContentContainer = styled.div`
+	min-height: 100px;
+`;
+
+const CommentContentWrapper = styled.div`
+	white-space: pre-wrap;
+	margin-top: 4px;
+`;
+
+const CommentMetaWrapper = styled.div`
+	display: flex;
+	border-top: 1px solid var(--color-border);
+	padding-top: 8px;
+	font-size: 0.875rem;
+	color: var(--color-subFont);
+	justify-content: flex-end;
+`;
+
+const CommentAuthor = styled.div`
+	margin-right: 16px;
+`;
+
+const CommentDate = styled.div``;

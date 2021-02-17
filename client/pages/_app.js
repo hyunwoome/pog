@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
 	--color-primary: #ff577f;
 	--color-key: #fbd757;
 	--color-font: #292927;
+	--color-subFont: #919191;
 	--color-border: #e0e0e0;
 	--color-placeholder: #bebebe;
 

@@ -530,17 +530,17 @@
       "Question-comment": {
         "required": [
           "id",
-          "Author",
-          "Content"
+          "author",
+          "content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Author": {
+          "author": {
             "type": "string"
           },
-          "Content": {
+          "content": {
             "type": "string"
           },
           "commentField": {
@@ -585,6 +585,10 @@
               }
             }
           },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -593,18 +597,22 @@
       },
       "NewQuestion-comment": {
         "required": [
-          "Author",
-          "Content"
+          "author",
+          "content"
         ],
         "properties": {
-          "Author": {
+          "author": {
             "type": "string"
           },
-          "Content": {
+          "content": {
             "type": "string"
           },
           "commentField": {
             "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
           },
           "published_at": {
             "type": "string",

@@ -35,7 +35,7 @@ export default function Question({ data }) {
 							</QuestionDateAuthorWrapper>
 						</QuestionMetaWrapper>
 						<QuestionIcons>
-							{item.check ? (
+							{item.questionField.length !== 0 ? (
 								<CheckCircleOutlineRoundedIcon
 									style={{ fontSize: 30, color: '#ff577f' }}
 								/>
@@ -55,9 +55,9 @@ export default function Question({ data }) {
 		<div>
 			<BackButton
 				title="견적문의"
-				icon={CreateRoundedIcon}
 				color="#2296f2"
 				buttonHandle={pushCreate}
+				icon={CreateRoundedIcon}
 			/>
 			<QuestionContainer>
 				<QuestionContentWrapper>{QuestionItem}</QuestionContentWrapper>
@@ -123,7 +123,6 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-	display: block;
 	width: 100%;
 	border: 0;
 	border-radius: 3px;

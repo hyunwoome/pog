@@ -13,6 +13,14 @@ export default function QuestionCreate() {
 		router.push('/question');
 	};
 
+	const textAreaDefaultValue = `예시)
+1. 일정:
+2. 요청국가:
+3. 인원수:
+4. 요청골프장:
+5. 기타요청:
+	`;
+
 	const submitQuestion = async (event) => {
 		event.preventDefault();
 
@@ -55,7 +63,7 @@ export default function QuestionCreate() {
 							id="title"
 						/>
 						<QuestionCreateTextarea
-							placeholder="내용을 입력하세요"
+							defaultValue={textAreaDefaultValue}
 							id="content"
 							required
 						/>

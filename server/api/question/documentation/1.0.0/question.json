@@ -542,20 +542,23 @@
             "items": {
               "required": [
                 "id",
-                "Author",
-                "Content"
+                "author",
+                "content"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "Author": {
+                "author": {
                   "type": "string"
                 },
-                "Content": {
+                "content": {
                   "type": "string"
                 },
                 "commentField": {
+                  "type": "string"
+                },
+                "date": {
                   "type": "string"
                 },
                 "published_at": {

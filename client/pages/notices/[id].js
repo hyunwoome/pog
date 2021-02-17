@@ -41,9 +41,7 @@ export default function Notices({ notice }) {
 					<NoticeTitle>{notice.title}</NoticeTitle>
 					<NoticeDate>{notice.date}</NoticeDate>
 				</NoticeTitleDateWrapper>
-				<NoticeContentWrapper>
-					<p>{notice.content}</p>
-				</NoticeContentWrapper>
+				<NoticeContentWrapper>{notice.content}</NoticeContentWrapper>
 			</NoticeContainer>
 		</div>
 	);
@@ -73,6 +71,6 @@ const NoticeDate = styled.div`
 `;
 
 const NoticeContentWrapper = styled.div`
-	margin-top: 16px;
-	font-size: 0.875rem;
+	margin: 16px 8px;
+	white-space: pre-wrap;
 `;
