@@ -1,10 +1,31 @@
 import styled from 'styled-components';
-import BackButton from '../../components/component/BackButton';
+import BackButton from '../../../components/component/BackButton';
+import BaseInput from '../../../components/component/BaseInput';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
-import BaseInput from '../../components/component/BaseInput';
 
-export default function QuestionCreate() {
+export async function getStaticProps({ params: { id } }) {
+	const res = await fetch(`http://localhost:1337/questions/?id=${id}`);
+	const found = await res.json();
+	return {
+		props: {
+			question: found[0],
+		},
+	};
+}
+
+export async function getStaticPaths() {
+	const res = await fetch(`http://localhost:1337/questions/`);
+	const questions = await res.json();
+	return {
+		paths: questions.map((question) => ({
+			params: { id: question.id },
+		})),
+		fallback: false,
+	};
+}
+
+export default function Update({ question }) {
 	const router = useRouter();
 	const homeButton = () => {
 		router.push('/');
@@ -13,26 +34,19 @@ export default function QuestionCreate() {
 		router.push('/question');
 	};
 
-	const submitQuestion = async (event) => {
+	const queryId = router.query.id;
+	const updateQuestion = async (event) => {
 		event.preventDefault();
 
-		const day = new Date();
-		const dd = String(day.getDate()).padStart(2, '0');
-		const mm = String(day.getMonth() + 1).padStart(2, '0');
-		const yyyy = day.getFullYear();
-		const today = `${yyyy}-${mm}-${dd}`;
-		console.log(today);
-
-		const res = await fetch('http://localhost:1337/questions', {
+		const res = await fetch(`http://localhost:1337/questions/${queryId}`, {
 			body: JSON.stringify({
 				title: event.target.title.value,
 				content: event.target.content.value,
-				date: today,
 			}),
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			method: 'POST',
+			method: 'PUT',
 		});
 		pushQuestion();
 	};
@@ -47,19 +61,19 @@ export default function QuestionCreate() {
 			/>
 			<QuestionCreateContainer>
 				<QuestionCreateContentWrapper>
-					<form onSubmit={submitQuestion}>
+					<form onSubmit={updateQuestion}>
 						<BaseInput
 							type="text"
-							placeholder="제목을 입력하세요"
 							required={true}
 							id="title"
+							defaultValue={question.title}
 						/>
 						<QuestionCreateTextarea
-							placeholder="내용을 입력하세요"
 							id="content"
 							required
+							defaultValue={question.content}
 						/>
-						<Button type="submit">작성완료</Button>
+						<Button type="submit">수정완료</Button>
 					</form>
 				</QuestionCreateContentWrapper>
 			</QuestionCreateContainer>

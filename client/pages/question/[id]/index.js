@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BackButton from '../../components/component/BackButton';
+import BackButton from '../../../components/component/BackButton';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
@@ -26,8 +26,13 @@ export async function getStaticPaths() {
 }
 
 export default function QuestionDetail({ question }) {
+	const router = useRouter();
+	const queryId = router.query.id;
 	const homeButton = () => {
 		router.push('/');
+	};
+	const updateButton = () => {
+		router.push(`/question/${queryId}/update`);
 	};
 	return (
 		<div>
@@ -63,6 +68,10 @@ export default function QuestionDetail({ question }) {
 					{question.content}
 				</QuestionDetailContentWrapper>
 			</QuestionDetailContainer>
+			<ButtonWrapper>
+				<LinedButton onClick={updateButton}>수정하기</LinedButton>
+				<Button>삭제하기</Button>
+			</ButtonWrapper>
 		</div>
 	);
 }
@@ -113,4 +122,36 @@ const QuestionIcons = styled.div`
 	flex: 2;
 	text-align: right;
 	padding-right: 8px;
+`;
+
+const ButtonWrapper = styled.div`
+	display: flex;
+	padding: 16px;
+	background: var(--color-background);
+`;
+
+const Button = styled.button`
+	display: block;
+	width: 100%;
+	border: 0;
+	border-radius: 3px;
+	padding: 16px;
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	font-size: 1rem;
+	cursor: pointer;
+`;
+
+const LinedButton = styled.button`
+	display: block;
+	width: 100%;
+	border: 0;
+	border-radius: 3px;
+	padding: 14px;
+	background-color: var(--color-background);
+	color: var(--color-primary);
+	border: 2px solid var(--color-primary);
+	font-size: 1rem;
+	cursor: pointer;
+	margin-right: 16px;
 `;
