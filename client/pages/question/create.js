@@ -13,12 +13,11 @@ export default function QuestionCreate() {
 		router.push('/question');
 	};
 
-	const textAreaDefaultValue = `예시)
-1. 일정:
-2. 요청국가:
-3. 인원수:
-4. 요청골프장:
-5. 기타요청:
+	const textAreaDefaultValue = `1. 일정 :
+2. 요청 국가 :
+3. 인원수 :
+4. 요청 골프장 :
+5. 기타 요청 :
 	`;
 
 	const submitQuestion = async (event) => {

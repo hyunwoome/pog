@@ -3,31 +3,41 @@ import BackButton from '../../components/component/BackButton';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
 
-export async function getStaticProps({ params: { id } }) {
-	const res = await fetch(`http://localhost:1337/notices/?id=${id}`);
-	const found = await res.json();
-	return {
-		props: {
-			notice: found[0],
-		},
-	};
-}
+// export async function getStaticProps({ params: { id } }) {
+// 	const res = await fetch(`http://localhost:1337/notices/?id=${id}`);
+// 	const found = await res.json();
+// 	return {
+// 		props: {
+// 			notice: found[0],
+// 		},
+// 	};
+// }
 
-export async function getStaticPaths() {
-	const res = await fetch(`http://localhost:1337/notices/`);
-	const notices = await res.json();
+// export async function getStaticPaths() {
+// 	const res = await fetch(`http://localhost:1337/notices/`);
+// 	const notices = await res.json();
+// 	return {
+// 		paths: notices.map((notice) => ({
+// 			params: { id: notice.id },
+// 		})),
+// 		fallback: false,
+// 	};
+// }
+
+export async function getServerSideProps({ params: { id } }) {
+	const res = await fetch(`http://localhost:1337/notices/${id}`);
+	const notice = await res.json();
 	return {
-		paths: notices.map((notice) => ({
-			params: { id: notice.id },
-		})),
-		fallback: false,
+		props: { notice },
 	};
 }
 
 export default function Notices({ notice }) {
+	const router = useRouter();
 	const homeButton = () => {
 		router.push('/');
 	};
+
 	return (
 		<div>
 			<BackButton

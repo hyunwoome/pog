@@ -3,7 +3,6 @@ import BackButton from '../../../components/component/BackButton';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
-import { StepLabel } from '@material-ui/core';
 
 // ! Fetch Question
 export async function getStaticProps({ params: { id } }) {
@@ -29,7 +28,7 @@ export async function getStaticPaths() {
 }
 
 // ! Component
-export default function QuestionDetail({ question, questionField }) {
+export default function QuestionDetail({ question }) {
 	const router = useRouter();
 	const queryId = router.query.id;
 	const homeButton = () => {
