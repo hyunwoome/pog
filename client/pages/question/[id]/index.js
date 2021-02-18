@@ -3,6 +3,7 @@ import BackButton from '../../../components/component/BackButton';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
+import { StepLabel } from '@material-ui/core';
 
 // ! Fetch Question
 export async function getStaticProps({ params: { id } }) {
@@ -11,7 +12,7 @@ export async function getStaticProps({ params: { id } }) {
 	return {
 		props: {
 			question: found[0],
-			questionField: found[0].questionField[0],
+			questionField: found[0].questionField[0] || null,
 		},
 	};
 }
@@ -57,12 +58,17 @@ export default function QuestionDetail({ question, questionField }) {
 			<CommentContainer key={item.id}>
 				<CommentWrapper>
 					<CommentContentContainer>
-						<CommentTitle>답변완료</CommentTitle>
+						<CommentTopWrapper>
+							<CommentTitle>답변완료</CommentTitle>
+							<CommentDate>{item.published_at.slice(0, 10)}</CommentDate>
+						</CommentTopWrapper>
 						<CommentContentWrapper>{item.content}</CommentContentWrapper>
 					</CommentContentContainer>
 					<CommentMetaWrapper>
+						<CommentAuthorLabel>담당자 :</CommentAuthorLabel>
 						<CommentAuthor>{item.author}</CommentAuthor>
-						<CommentDate>{item.date}</CommentDate>
+						<CommentTelLabel>문의 :</CommentTelLabel>
+						<CommentTel>010-1025-0983</CommentTel>
 					</CommentMetaWrapper>
 				</CommentWrapper>
 			</CommentContainer>
@@ -139,12 +145,13 @@ const QuestionAuthor = styled.div``;
 const QuestionDate = styled.div``;
 
 const QuestionDetailDateAuthorWrapper = styled.div`
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	margin-top: 4px;
 	color: var(--color-subFont);
 	display: flex;
 	width: 120px;
 	justify-content: space-between;
+	font-weight: 300;
 `;
 
 const QuestionDetailContentWrapper = styled.div`
@@ -212,6 +219,17 @@ const CommentContentContainer = styled.div`
 	min-height: 100px;
 `;
 
+const CommentTopWrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+
+const CommentDate = styled.div`
+	font-weight: 300;
+	color: var(--color-subFont);
+	font-size: 0.875rem;
+`;
+
 const CommentContentWrapper = styled.div`
 	white-space: pre-wrap;
 	margin-top: 4px;
@@ -224,10 +242,21 @@ const CommentMetaWrapper = styled.div`
 	font-size: 0.875rem;
 	color: var(--color-subFont);
 	justify-content: flex-end;
+	font-weight: 300;
+`;
+
+const CommentAuthorLabel = styled.div`
+	font-weight: 400;
+	margin-right: 4px;
 `;
 
 const CommentAuthor = styled.div`
-	margin-right: 16px;
+	margin-right: 12px;
 `;
 
-const CommentDate = styled.div``;
+const CommentTelLabel = styled.div`
+	font-weight: 400;
+	margin-right: 4px;
+`;
+
+const CommentTel = styled.div``;

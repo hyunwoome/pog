@@ -29,7 +29,6 @@ export default function QuestionCreate() {
 		const mm = String(day.getMonth() + 1).padStart(2, '0');
 		const yyyy = day.getFullYear();
 		const today = `${yyyy}-${mm}-${dd}`;
-		console.log(today);
 
 		const res = await fetch('http://localhost:1337/questions', {
 			body: JSON.stringify({

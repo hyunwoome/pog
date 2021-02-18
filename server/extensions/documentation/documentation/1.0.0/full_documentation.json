@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/17/2021 8:53:37 PM"
+    "x-generation-date": "02/18/2021 5:22:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3703,10 +3703,6 @@
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
           },
@@ -3720,10 +3716,6 @@
         "properties": {
           "title": {
             "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "content": {
             "type": "string"
@@ -3759,8 +3751,7 @@
           "commentField": {
             "required": [
               "id",
-              "title",
-              "date"
+              "title"
             ],
             "properties": {
               "id": {
@@ -3769,14 +3760,8 @@
               "title": {
                 "type": "string"
               },
-              "date": {
-                "type": "string"
-              },
               "content": {
                 "type": "string"
-              },
-              "check": {
-                "type": "boolean"
               },
               "questionField": {
                 "type": "array",
@@ -3842,8 +3827,7 @@
       "Question": {
         "required": [
           "id",
-          "title",
-          "date"
+          "title"
         ],
         "properties": {
           "id": {
@@ -3852,15 +3836,8 @@
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
-          },
-          "check": {
-            "type": "boolean"
           },
           "questionField": {
             "type": "array",
@@ -3909,22 +3886,14 @@
       },
       "NewQuestion": {
         "required": [
-          "title",
-          "date"
+          "title"
         ],
         "properties": {
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
-          },
-          "check": {
-            "type": "boolean"
           },
           "questionField": {
             "type": "array",

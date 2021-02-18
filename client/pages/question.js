@@ -4,6 +4,7 @@ import Link from 'next/link';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:1337/questions');
@@ -26,12 +27,12 @@ export default function Question({ data }) {
 			<Link href={`/question/${item.id}`} key={item.id}>
 				<a>
 					<QuestionItemWrapper>
-						<QuestionNumber>{item.number}</QuestionNumber>
+						{/* <QuestionNumber>{index + 1}</QuestionNumber> */}
 						<QuestionMetaWrapper>
 							<QuestionTitle>{item.title}</QuestionTitle>
 							<QuestionDateAuthorWrapper>
 								<QuestionAuthor>{item.author}</QuestionAuthor>
-								<QuestionDate>{item.date}</QuestionDate>
+								<QuestionDate>{item.published_at.slice(0, 10)}</QuestionDate>
 							</QuestionDateAuthorWrapper>
 						</QuestionMetaWrapper>
 						<QuestionIcons>
@@ -88,14 +89,12 @@ const QuestionItemWrapper = styled.div`
 	font-size: 0.875rem;
 `;
 
-const QuestionNumber = styled.div`
-	width: 36px;
-`;
-
-const QuestionTitle = styled.div`
+const QuestionTitle = styled.h3`
 	margin-bottom: 4px;
+	font-weight: 400;
 	font-size: 1rem;
 	text-align: left;
+	margin: 0;
 `;
 
 const QuestionMetaWrapper = styled.div`
@@ -109,27 +108,15 @@ const QuestionDateAuthorWrapper = styled.div`
 	width: 150px;
 `;
 
-const QuestionAuthor = styled.div``;
+const QuestionAuthor = styled.div`
+	font-weight: 300;
+`;
 
-const QuestionDate = styled.div``;
+const QuestionDate = styled.div`
+	font-weight: 300;
+`;
 
 const QuestionIcons = styled.div`
 	flex: 2;
 	text-align: right;
-`;
-
-const ButtonWrapper = styled.div`
-	padding: 0 16px 0 16px;
-`;
-
-const Button = styled.button`
-	width: 100%;
-	border: 0;
-	border-radius: 3px;
-	padding: 16px;
-	background-color: var(--color-primary);
-	color: var(--color-background);
-	font-size: 1rem;
-	margin-bottom: 16px;
-	cursor: pointer;
 `;

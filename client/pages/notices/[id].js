@@ -39,7 +39,7 @@ export default function Notices({ notice }) {
 			<NoticeContainer>
 				<NoticeTitleDateWrapper>
 					<NoticeTitle>{notice.title}</NoticeTitle>
-					<NoticeDate>{notice.date}</NoticeDate>
+					<NoticeDate>{notice.published_at.slice(0, 10)}</NoticeDate>
 				</NoticeTitleDateWrapper>
 				<NoticeContentWrapper>{notice.content}</NoticeContentWrapper>
 			</NoticeContainer>
@@ -65,12 +65,13 @@ const NoticeTitle = styled.h3`
 `;
 
 const NoticeDate = styled.div`
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	margin-top: 4px;
 	color: #919191;
+	font-weight: 300;
 `;
 
 const NoticeContentWrapper = styled.div`
-	margin: 16px 8px;
+	margin: 16px 0;
 	white-space: pre-wrap;
 `;

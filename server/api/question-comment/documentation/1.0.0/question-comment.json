@@ -546,8 +546,7 @@
           "commentField": {
             "required": [
               "id",
-              "title",
-              "date"
+              "title"
             ],
             "properties": {
               "id": {
@@ -556,14 +555,8 @@
               "title": {
                 "type": "string"
               },
-              "date": {
-                "type": "string"
-              },
               "content": {
                 "type": "string"
-              },
-              "check": {
-                "type": "boolean"
               },
               "questionField": {
                 "type": "array",

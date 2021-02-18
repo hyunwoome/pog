@@ -20,8 +20,8 @@
       "required": true
     },
     "commentField": {
-      "model": "question",
-      "via": "questionField"
+      "via": "questionField",
+      "model": "question"
     },
     "date": {
       "type": "date"

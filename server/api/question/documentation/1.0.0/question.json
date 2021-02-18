@@ -517,8 +517,7 @@
       "Question": {
         "required": [
           "id",
-          "title",
-          "date"
+          "title"
         ],
         "properties": {
           "id": {
@@ -527,15 +526,8 @@
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
-          },
-          "check": {
-            "type": "boolean"
           },
           "questionField": {
             "type": "array",
@@ -584,22 +576,14 @@
       },
       "NewQuestion": {
         "required": [
-          "title",
-          "date"
+          "title"
         ],
         "properties": {
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
-          },
-          "check": {
-            "type": "boolean"
           },
           "questionField": {
             "type": "array",

@@ -30,7 +30,7 @@ export default function Notices({ noticeItem }) {
 					<NoticesCardWrapper>
 						<ContentWrapper>
 							<NoticesTitle>{data.title}</NoticesTitle>
-							<NoticesDate>{data.date}</NoticesDate>
+							<NoticesDate>{data.published_at.slice(0, 10)}</NoticesDate>
 						</ContentWrapper>
 						<IconWrapper>
 							<ArrowForwardIosIcon fontSize="small" color="action" />
@@ -39,8 +39,6 @@ export default function Notices({ noticeItem }) {
 				</a>
 			</Link>
 		));
-
-	console.log(noticeItem);
 
 	return (
 		<div>
@@ -65,12 +63,6 @@ const NoticesContainer = styled.div`
 	text-align: center;
 `;
 
-const NoticesTitleWrapper = styled.h3`
-	font-weight: 400;
-	margin: 0;
-	margin-bottom: 16px;
-`;
-
 const NoticesWrapper = styled.div``;
 
 const NoticesCardWrapper = styled.div`
@@ -87,15 +79,17 @@ const ContentWrapper = styled.div`
 	padding-right: 8px;
 `;
 
-const NoticesTitle = styled.h4`
-	margin: 0;
+const NoticesTitle = styled.h3`
 	font-weight: 400;
+	margin: 0;
+	font-size: 1rem;
 `;
 
 const NoticesDate = styled.div`
-	font-size: 0.75rem;
+	font-size: 0.875rem;
 	margin-top: 4px;
 	color: #919191;
+	font-weight: 300;
 `;
 
 const IconWrapper = styled.div``;

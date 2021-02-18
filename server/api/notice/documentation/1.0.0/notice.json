@@ -525,10 +525,6 @@
           "title": {
             "type": "string"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "content": {
             "type": "string"
           },
@@ -542,10 +538,6 @@
         "properties": {
           "title": {
             "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "content": {
             "type": "string"
