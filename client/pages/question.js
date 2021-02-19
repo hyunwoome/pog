@@ -4,7 +4,6 @@ import Link from 'next/link';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:1337/questions');
