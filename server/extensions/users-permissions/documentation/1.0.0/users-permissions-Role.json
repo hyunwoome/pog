@@ -528,7 +528,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "phone"
               ],
               "properties": {
                 "id": {
@@ -560,6 +561,9 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "phone": {
+                  "type": "uid"
                 },
                 "created_by": {
                   "type": "string"

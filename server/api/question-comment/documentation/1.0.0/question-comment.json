@@ -578,10 +578,6 @@
               }
             }
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -602,10 +598,6 @@
           },
           "commentField": {
             "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "published_at": {
             "type": "string",

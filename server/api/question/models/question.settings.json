@@ -20,8 +20,8 @@
       "type": "richtext"
     },
     "questionField": {
-      "collection": "question-comment",
-      "via": "commentField"
+      "via": "commentField",
+      "collection": "question-comment"
     },
     "author": {
       "type": "string"

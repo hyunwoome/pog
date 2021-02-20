@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/18/2021 5:22:09 PM"
+    "x-generation-date": "02/20/2021 9:39:36 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3783,10 +3783,6 @@
               }
             }
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3807,10 +3803,6 @@
           },
           "commentField": {
             "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "published_at": {
             "type": "string",
@@ -3858,9 +3850,6 @@
                   "type": "string"
                 },
                 "commentField": {
-                  "type": "string"
-                },
-                "date": {
                   "type": "string"
                 },
                 "published_at": {
@@ -3982,7 +3971,8 @@
               "required": [
                 "id",
                 "username",
-                "email"
+                "email",
+                "phone"
               ],
               "properties": {
                 "id": {
@@ -4014,6 +4004,9 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "phone": {
+                  "type": "uid"
                 },
                 "created_by": {
                   "type": "string"
@@ -4065,7 +4058,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "id": {
@@ -4127,13 +4121,17 @@
                 "type": "string"
               }
             }
+          },
+          "phone": {
+            "type": "uid"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "username": {
@@ -4168,6 +4166,9 @@
           },
           "role": {
             "type": "string"
+          },
+          "phone": {
+            "type": "uid"
           },
           "created_by": {
             "type": "string"

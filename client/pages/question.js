@@ -6,7 +6,7 @@ import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps() {
-	const res = await fetch('http://localhost:1337/questions');
+	const res = await fetch(`http://localhost:1337/questions`);
 	const data = await res.json();
 	return {
 		props: { data },

@@ -1188,7 +1188,8 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "id": {
@@ -1250,13 +1251,17 @@
                 "type": "string"
               }
             }
+          },
+          "phone": {
+            "type": "uid"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "phone"
         ],
         "properties": {
           "username": {
@@ -1291,6 +1296,9 @@
           },
           "role": {
             "type": "string"
+          },
+          "phone": {
+            "type": "uid"
           },
           "created_by": {
             "type": "string"

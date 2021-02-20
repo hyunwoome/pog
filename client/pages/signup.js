@@ -48,11 +48,6 @@ const SignupContainer = styled.div`
 	text-align: center;
 `;
 
-const SignupTitleWrapper = styled.h3`
-	font-weight: 400;
-	margin: 0;
-`;
-
 const SignupInputWrapper = styled.div`
 	margin-top: 16px;
 `;
@@ -69,19 +64,6 @@ const Button = styled.button`
 	margin-bottom: 16px;
 	cursor: pointer;
 `;
-
-// const LinedButton = styled.button`
-// 	display: block;
-// 	width: 100%;
-// 	border: 0;
-// 	border-radius: 3px;
-// 	padding: 14px;
-// 	background-color: var(--color-background);
-// 	color: var(--color-primary);
-// 	border: 2px solid var(--color-primary);
-// 	font-size: 1rem;
-// 	cursor: pointer;
-// `;
 
 const LinkWrapper = styled.div`
 	margin-top: 16px;

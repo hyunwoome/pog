@@ -5,28 +5,6 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useRouter } from 'next/router';
 
 // ! Fetch Question
-// export async function getStaticProps({ params: { id } }) {
-// 	const res = await fetch(`http://localhost:1337/questions/?id=${id}`);
-// 	const found = await res.json();
-// 	return {
-// 		props: {
-// 			question: found[0],
-// 			questionField: found[0].questionField[0] || null,
-// 		},
-// 	};
-// }
-
-// export async function getStaticPaths() {
-// 	const res = await fetch(`http://localhost:1337/questions/`);
-// 	const questions = await res.json();
-// 	return {
-// 		paths: questions.map((question) => ({
-// 			params: { id: question.id },
-// 		})),
-// 		fallback: false,
-// 	};
-// }
-
 export async function getServerSideProps({ params: { id } }) {
 	const res = await fetch(`http://localhost:1337/questions/${id}`);
 	const question = await res.json();
