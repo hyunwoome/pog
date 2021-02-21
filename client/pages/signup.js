@@ -23,6 +23,7 @@ export default function Signup() {
 				<SignupInputWrapper>
 					<BaseInput type="text" placeholder="이름" />
 					<BaseInput type="tel" placeholder="아이디 (핸드폰번호)" />
+					<BaseInput type="email" placeholder="이메일" />
 					<BaseInput type="password" placeholder="비밀번호" />
 					<BaseInput type="password" placeholder="비밀번호 확인" />
 					<Button>회원가입</Button>

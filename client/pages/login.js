@@ -4,8 +4,34 @@ import BackButton from '../components/component/BackButton';
 import BaseInput from '../components/component/BaseInput';
 import Link from 'next/link';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { useState } from 'react';
 
 export default function Login() {
+	const [telephone, setTelephone] = useState('');
+	const [password, setPassword] = useState('');
+
+	async function handleLogin() {
+		const loginInfo = {
+			identifier: telephone,
+			password: password,
+		};
+
+		console.log(typeof identifier);
+		console.log(typeof password);
+
+		const login = await fetch(`http://localhost:1337/auth/local`, {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(loginInfo),
+		});
+
+		const loginResponse = await login.json();
+		console.log(loginResponse);
+	}
+
 	const router = useRouter();
 
 	const pushSignup = () => {
@@ -26,9 +52,19 @@ export default function Login() {
 			/>
 			<LoginContainer>
 				<LoginInputWrapper>
-					<BaseInput type="tel" placeholder="아이디 (휴대폰번호)" />
-					<BaseInput type="password" placeholder="비밀번호" />
-					<Button>로그인</Button>
+					<BaseInput
+						type="tel"
+						placeholder="아이디 (휴대폰번호)"
+						onChange={(e) => setTelephone(e.target.value)}
+						value={telephone}
+					/>
+					<BaseInput
+						type="password"
+						placeholder="비밀번호"
+						onChange={(e) => setPassword(e.target.value)}
+						value={password}
+					/>
+					<Button onClick={() => handleLogin()}>로그인</Button>
 					<LinedButton onClick={pushSignup}>회원가입</LinedButton>
 				</LoginInputWrapper>
 				<LinkWrapper>

@@ -529,7 +529,7 @@
                 "id",
                 "username",
                 "email",
-                "phone"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -562,8 +562,8 @@
                 "role": {
                   "type": "string"
                 },
-                "phone": {
-                  "type": "uid"
+                "name": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

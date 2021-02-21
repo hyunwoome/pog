@@ -2,29 +2,48 @@ import styled from 'styled-components';
 import BackButton from '../../../components/component/BackButton';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
-import { useRouter } from 'next/router';
+import Router from 'next/router';
+
+function redirectionUser(ctx, location) {
+	if (ctx.req) {
+		ctx.res.writeHead(302, { Location: location });
+		ctx.res.end();
+	} else {
+		Router.push(location);
+	}
+}
 
 // ! Fetch Question
-export async function getServerSideProps({ params: { id } }) {
-	const res = await fetch(`http://localhost:1337/questions/${id}`);
-	const question = await res.json();
-	return {
-		props: { question },
-	};
+export async function getServerSideProps({ params: { id }, ctx }) {
+	const jwt = false;
+
+	if (!jwt) {
+		return {
+			redirect: {
+				destination: '/login',
+				permanent: false,
+			},
+		};
+	} else {
+		const res = await fetch(`http://localhost:1337/questions/${id}`);
+		const question = await res.json();
+		return {
+			props: { question },
+		};
+	}
 }
 
 // ! Component
 export default function QuestionDetail({ question }) {
-	const router = useRouter();
-	const queryId = router.query.id;
+	const queryId = Router.query.id;
 	const homeButton = () => {
-		router.push('/');
+		Router.push('/');
 	};
 	const pushQuestion = () => {
-		router.push('/question');
+		Router.push('/question');
 	};
 	const updateButton = () => {
-		router.push(`/question/${queryId}/update`);
+		Router.push(`/question/${queryId}/update`);
 	};
 
 	// ! DELETE
