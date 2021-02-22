@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/21/2021 2:09:55 PM"
+    "x-generation-date": "02/22/2021 2:55:38 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3736,7 +3736,8 @@
         "required": [
           "id",
           "author",
-          "content"
+          "content",
+          "phone"
         ],
         "properties": {
           "id": {
@@ -3783,6 +3784,9 @@
               }
             }
           },
+          "phone": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3792,7 +3796,8 @@
       "NewQuestion-comment": {
         "required": [
           "author",
-          "content"
+          "content",
+          "phone"
         ],
         "properties": {
           "author": {
@@ -3803,6 +3808,9 @@
           },
           "commentField": {
             "type": "string"
+          },
+          "phone": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
@@ -3837,7 +3845,8 @@
               "required": [
                 "id",
                 "author",
-                "content"
+                "content",
+                "phone"
               ],
               "properties": {
                 "id": {
@@ -3851,6 +3860,9 @@
                 },
                 "commentField": {
                   "type": "string"
+                },
+                "phone": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"

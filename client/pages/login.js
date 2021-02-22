@@ -1,23 +1,20 @@
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import styled from 'styled-components';
 import BackButton from '../components/component/BackButton';
-import BaseInput from '../components/component/BaseInput';
 import Link from 'next/link';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useState } from 'react';
+import { setCookie } from 'nookies';
 
 export default function Login() {
 	const [telephone, setTelephone] = useState('');
-	const [password, setPassword] = useState('');
+	const [_password, setPassword] = useState('');
 
 	async function handleLogin() {
 		const loginInfo = {
 			identifier: telephone,
-			password: password,
+			password: _password,
 		};
-
-		console.log(typeof identifier);
-		console.log(typeof password);
 
 		const login = await fetch(`http://localhost:1337/auth/local`, {
 			method: 'POST',
@@ -29,17 +26,22 @@ export default function Login() {
 		});
 
 		const loginResponse = await login.json();
-		console.log(loginResponse);
+
+		// ! Set jwt Cookies
+		setCookie(null, 'jwt', loginResponse.jwt, {
+			maxAge: 30 * 24 * 60 * 60, // Three days
+			path: '/',
+		});
+
+		Router.push('/');
 	}
 
-	const router = useRouter();
-
 	const pushSignup = () => {
-		router.push('/signup');
+		Router.push('/signup');
 	};
 
 	const homeButton = () => {
-		router.push('/');
+		Router.push('/');
 	};
 
 	return (
@@ -52,17 +54,17 @@ export default function Login() {
 			/>
 			<LoginContainer>
 				<LoginInputWrapper>
-					<BaseInput
+					<LoginInput
 						type="tel"
 						placeholder="아이디 (휴대폰번호)"
 						onChange={(e) => setTelephone(e.target.value)}
 						value={telephone}
 					/>
-					<BaseInput
+					<LoginInput
 						type="password"
 						placeholder="비밀번호"
 						onChange={(e) => setPassword(e.target.value)}
-						value={password}
+						value={_password}
 					/>
 					<Button onClick={() => handleLogin()}>로그인</Button>
 					<LinedButton onClick={pushSignup}>회원가입</LinedButton>
@@ -128,5 +130,17 @@ const CustomAnchor = styled.a`
 	font-size: 0.875rem;
 	&:hover {
 		cursor: pointer;
+	}
+`;
+
+const LoginInput = styled.input`
+	width: 100%;
+	border: 1px solid var(--color-border);
+	padding: 16px;
+	font-size: 1rem;
+	border-radius: 3px;
+	margin-bottom: 16px;
+	&::placeholder {
+		color: var(--color-placeholder);
 	}
 `;

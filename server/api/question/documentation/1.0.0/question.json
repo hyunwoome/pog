@@ -535,7 +535,8 @@
               "required": [
                 "id",
                 "author",
-                "content"
+                "content",
+                "phone"
               ],
               "properties": {
                 "id": {
@@ -549,6 +550,9 @@
                 },
                 "commentField": {
                   "type": "string"
+                },
+                "phone": {
+                  "type": "uid"
                 },
                 "published_at": {
                   "type": "string"

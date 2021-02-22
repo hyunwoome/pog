@@ -4,6 +4,7 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import EventAvailableRoundedIcon from '@material-ui/icons/EventAvailableRounded';
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import { useState, useEffect } from 'react';
 
 export default function BottomNavigation() {
@@ -41,6 +42,14 @@ export default function BottomNavigation() {
 					<MenuRoundedIcon color="action" />
 					<TitleContainer>
 						<a>전체메뉴</a>
+					</TitleContainer>
+				</IconTitleContainer>
+			</Link>
+			<Link href="/login">
+				<IconTitleContainer>
+					<ExitToAppRoundedIcon color="action" />
+					<TitleContainer>
+						<a>로그인</a>
 					</TitleContainer>
 				</IconTitleContainer>
 			</Link>

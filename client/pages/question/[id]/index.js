@@ -4,38 +4,26 @@ import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutline
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import Router from 'next/router';
 
-function redirectionUser(ctx, location) {
-	if (ctx.req) {
-		ctx.res.writeHead(302, { Location: location });
-		ctx.res.end();
-	} else {
-		Router.push(location);
-	}
-}
+// function redirectionUser(ctx, location) {
+// 	if (ctx.req) {
+// 		ctx.res.writeHead(302, { Location: location });
+// 		ctx.res.end();
+// 	} else {
+// 		Router.push(location);
+// 	}
+// }
 
 // ! Fetch Question
-export async function getServerSideProps({ params: { id }, ctx }) {
-	const jwt = false;
-
-	if (!jwt) {
-		return {
-			redirect: {
-				destination: '/login',
-				permanent: false,
-			},
-		};
-	} else {
-		const res = await fetch(`http://localhost:1337/questions/${id}`);
-		const question = await res.json();
-		return {
-			props: { question },
-		};
-	}
+export async function getServerSideProps({ params: { id } }) {
+	const res = await fetch(`http://localhost:1337/questions/${id}`);
+	const question = await res.json();
+	return {
+		props: { question },
+	};
 }
 
 // ! Component
 export default function QuestionDetail({ question }) {
-	const queryId = Router.query.id;
 	const homeButton = () => {
 		Router.push('/');
 	};
@@ -72,7 +60,7 @@ export default function QuestionDetail({ question }) {
 						<CommentAuthorLabel>담당자 :</CommentAuthorLabel>
 						<CommentAuthor>{item.author}</CommentAuthor>
 						<CommentTelLabel>문의 :</CommentTelLabel>
-						<CommentTel>010-1025-0983</CommentTel>
+						<CommentTel>{item.phone}</CommentTel>
 					</CommentMetaWrapper>
 				</CommentWrapper>
 			</CommentContainer>

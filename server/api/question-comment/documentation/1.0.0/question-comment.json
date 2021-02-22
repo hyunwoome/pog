@@ -531,7 +531,8 @@
         "required": [
           "id",
           "author",
-          "content"
+          "content",
+          "phone"
         ],
         "properties": {
           "id": {
@@ -578,6 +579,9 @@
               }
             }
           },
+          "phone": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -587,7 +591,8 @@
       "NewQuestion-comment": {
         "required": [
           "author",
-          "content"
+          "content",
+          "phone"
         ],
         "properties": {
           "author": {
@@ -598,6 +603,9 @@
           },
           "commentField": {
             "type": "string"
+          },
+          "phone": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
