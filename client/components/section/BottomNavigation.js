@@ -6,6 +6,7 @@ import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import EventAvailableRoundedIcon from '@material-ui/icons/EventAvailableRounded';
 import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import { useState, useEffect } from 'react';
+import Router from 'next/router';
 
 export default function BottomNavigation() {
 	const [prevScrollPos, setPrevScrollPos] = useState(0);

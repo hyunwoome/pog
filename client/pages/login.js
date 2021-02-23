@@ -33,12 +33,8 @@ export default function Login() {
 			path: '/',
 		});
 
-		Router.push('/');
+		Router.push('/question');
 	}
-
-	const pushSignup = () => {
-		Router.push('/signup');
-	};
 
 	const homeButton = () => {
 		Router.push('/');
@@ -67,7 +63,11 @@ export default function Login() {
 						value={_password}
 					/>
 					<Button onClick={() => handleLogin()}>로그인</Button>
-					<LinedButton onClick={pushSignup}>회원가입</LinedButton>
+					<Link href="/signup">
+						<a>
+							<LinedButton>회원가입</LinedButton>
+						</a>
+					</Link>
 				</LoginInputWrapper>
 				<LinkWrapper>
 					<Link href="/findid">

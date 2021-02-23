@@ -3,13 +3,12 @@ import AccountMenuList from '../components/menu/AccountMenuList';
 import GolfItemMenuList from '../components/menu/GolfItemMenuList';
 import NoticeMenuList from '../components/menu/NoticeMenuList';
 import BackButton from '../components/component/BackButton';
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 
 export default function Menu() {
-	const router = useRouter();
 	const homeButton = () => {
-		router.push('/');
+		Router.push('/');
 	};
 	return (
 		<div>

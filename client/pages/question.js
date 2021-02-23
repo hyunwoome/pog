@@ -4,31 +4,21 @@ import Link from 'next/link';
 import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
 import CreateRoundedIcon from '@material-ui/icons/CreateRounded';
 import Router from 'next/router';
+import NeedLogin from '../components/component/NeedLogin';
 import { parseCookies } from 'nookies';
 
-export async function getServerSideProps(ctx) {
-	const jwt = parseCookies(ctx).jwt;
-
-	if (!jwt) {
-		return {
-			redirect: {
-				destination: `/login`,
-				permanent: false,
-			},
-		};
-	} else {
-		const res = await fetch(`http://localhost:1337/questions`);
-		const data = await res.json();
-		return {
-			props: { data },
-		};
-	}
+export async function getServerSideProps() {
+	const res = await fetch(`http://localhost:1337/questions`);
+	const data = await res.json();
+	return {
+		props: { data },
+	};
 }
 
 export default function Question({ data }) {
-	const pushCreate = () => {
-		Router.push('/question/create');
-	};
+	if (data.error) {
+		return <NeedLogin />;
+	}
 
 	const QuestionItem = data
 		.slice(0)
